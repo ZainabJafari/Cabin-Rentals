@@ -1,0 +1,56 @@
+.home-slide-text {
+    color: #000;
+    text-align: center;
+    font-family: Libre Baskerville;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 119px 550px 64px 530px;
+}
+
+.slider {
+    width: 200px;
+    overflow: hidden;
+    width: 1105px;
+    height: 453px;
+    z-index: -1;
+    position: relative;
+    // flex-shrink: 0;
+}
+
+.slide {
+    width: 100%;
+    display: inline-block;
+    transition: transform 1s;
+    position: relative;
+}
+
+.slider img {
+    width: 1105px;
+    height: 500px;
+    flex-shrink: 0;
+    z-index: -1;
+    position: absolute;
+    margin: 0px 166px 130px 169px;
+
+}
+
+
+.next-button {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ändra till önskad position */
+    // transform: translateY(-50%);
+    // background-color: #f4f0f0;
+    // color: white;
+    // padding: 10px 20px;
+    // border: none;
+    cursor: pointer;
+    width: 31.284px;
+height: 53.569px;
+}
+
+// .next-button:hover {
+//     background-color: #555;
+// }
