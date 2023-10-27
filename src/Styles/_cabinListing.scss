@@ -1,0 +1,148 @@
+.list {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 300px;
+    flex-shrink: 0;
+    margin: 52px 122px 13px 118px;
+    border-radius: 10px;
+    box-shadow: 1px 5px gainsboro;
+}
+
+.card-one {
+    display: flex;
+
+    img {
+        width: 330px;
+        height: 300px;
+        border-radius: 15px 0px 0px 15px;
+        position: relative;
+    }
+
+    p {
+        background-color: aliceblue;
+        border-radius: 20px;
+        margin: 39px 20px 226px 210px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        position: absolute;
+        width: 100px;
+        height: 35px;
+        flex-shrink: 0;
+        color: #000;
+        text-align: center;
+        font-family: Lora;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.card-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 250px;
+
+    div {
+        display: flex;
+        padding: 2px;
+        margin-bottom: 15px;
+    }
+}
+
+.price {
+    width: 190px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    color: #000;
+    text-align: center;
+    font-family: Lora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    box-shadow: 5px 5px 5px 5px gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.cainName {
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.description {
+    color: #000;
+    font-family: Lora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.grades {
+    color: #000;
+    text-align: center;
+    font-family: Lora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    button {
+        display: flex;
+        width: 180px;
+        height: 52px;
+        padding: 11px 38px 10px 35px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background-color: #D8C690;
+        border: none;
+        border-radius: 15px;
+        color: #000;
+        font-family: Lora;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 59px;
+
+    }
+    div {
+        margin-left: 60px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 390px){
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 330px;
+        height: 180px;
+        flex-shrink: 0;
+        // margin: 52px 122px 13px 118px;
+        border-radius: 10px;
+        box-shadow: 1px 5px gainsboro;
+    }
+}

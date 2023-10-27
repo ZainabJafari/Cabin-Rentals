@@ -1,14 +1,14 @@
 import React from 'react'
 import HomePackages from '../Components/HomeComponents/HomePackages'
-import ImageSlider from '../Components/HomeComponents/ImageSlider'
+import HomeSliderPart from '../Components/HomeComponents/HomeSliderPart'
 import HomeReview from '../Components/HomeComponents/HomeReview'
-import Nav from '../Components/Nav'
+import Nav from '../Components/HomeComponents/HomeNav/Nav'
 const Home = () => {
   return (
     <div>
         <Nav />
         <HomePackages />
-        <ImageSlider />
+        <HomeSliderPart />
         <HomeReview />
     </div>
   )

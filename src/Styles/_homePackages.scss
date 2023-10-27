@@ -99,3 +99,55 @@
     line-height: normal;
     padding: 0px 10px 0px 16px;
 }
+
+@media (max-width: 390px) {
+
+    .home-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // width: 330px;
+        // justify-content: space-around;
+        // margin: 79px 166px 128px 169px;
+
+    }
+
+    .Rectangle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: #FCFCFC;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 330px;
+        height: 563px;
+        flex-shrink: 0;
+        // margin: 20px 169px 30px 166px;
+    }
+
+    .packages-h1 {
+        color: #000000;
+        text-align: center;
+        font-family: Libre Baskerville;
+        // font-size: 32px;
+        font-size: 13px;
+        font-style: normal;
+        // font-weight: 700;
+        // line-height: normal;
+        // text-align: center;
+        // margin: 79px;
+
+    }
+
+    .package-card {
+        // margin: 0px 40px 50px 40px;
+        
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 330px;
+        height: 526px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FCFCFC;
+    }
+}

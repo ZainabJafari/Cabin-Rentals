@@ -108,6 +108,40 @@
   padding: 0px 10px 0px 16px;
 }
 
+@media (max-width: 390px) {
+  .home-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Rectangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #FCFCFC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 330px;
+    height: 563px;
+    flex-shrink: 0;
+  }
+  .packages-h1 {
+    color: #000000;
+    text-align: center;
+    font-family: Libre Baskerville;
+    font-size: 13px;
+    font-style: normal;
+  }
+  .package-card {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 330px;
+    height: 526px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FCFCFC;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -166,6 +200,106 @@
 
 .navlink-link p {
   margin: 10px;
+}
+
+.hero {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 844px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #F1F1F1;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+.hero-drop {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.hero-dro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  margin: 14px;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.last {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.date {
+  color: #A0A0A0;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+
+.hero-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.dropdown-options {
+  width: 240px;
+  height: 152px;
+  flex-shrink: 0;
+  position: absolute;
+  margin-top: 270px;
+  border: 1px solid;
+  stroke-width: 1px;
+  stroke: #BFBFBF;
+  background-color: #BFBFBF;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  border-radius: 30px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  left: 820px;
+  border: 10px;
+}
+.dropdown-options :first-child {
+  background-color: #555555;
+  color: white;
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+}
+.dropdown-options :last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.option {
+  padding: 10px;
+  border: 1px solid;
+  background-color: white;
 }
 
 .footer-style {
@@ -309,7 +443,40 @@
   margin-right: 40px;
 }
 
-.home-slide-text {
+.slider {
+  position: relative;
+  text-align: center;
+}
+
+.slide {
+  display: inline-block;
+  position: relative;
+}
+
+.slide img {
+  display: block;
+  margin: 0 auto;
+  width: 1105px;
+  height: 453px;
+}
+
+.next-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0px 0px 190px 520px;
+  transform: translateX(-50%);
+  border: none;
+}
+
+.before-button {
+  position: absolute;
+  bottom: 10px;
+  right: 95%;
+  margin: 0px 0px 190px 40px;
+}
+
+.slide-text {
   color: #000;
   text-align: center;
   font-family: Libre Baskerville;
@@ -320,40 +487,24 @@
   margin: 119px 550px 64px 530px;
 }
 
-.slider {
-  width: 200px;
-  overflow: hidden;
-  width: 1105px;
-  height: 453px;
-  z-index: -1;
-  position: relative;
+@media (max-width: 390px) {
+  .next-button {
+    background-color: aqua;
+    border: none;
+  }
+  .before-button {
+    position: absolute;
+  }
+  .slide-text {
+    color: #000;
+    text-align: center;
+    font-family: Libre Baskerville;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
-
-.slide {
-  width: 100%;
-  display: inline-block;
-  transition: transform 1s;
-  position: relative;
-}
-
-.slider img {
-  width: 1105px;
-  height: 500px;
-  flex-shrink: 0;
-  z-index: -1;
-  position: absolute;
-  margin: 0px 166px 130px 169px;
-}
-
-.next-button {
-  position: absolute;
-  top: 50%;
-  right: 10px; /* Ändra till önskad position */
-  cursor: pointer;
-  width: 31.284px;
-  height: 53.569px;
-}
-
 .review-text {
   color: #000;
   text-align: center;
@@ -381,7 +532,7 @@
 
 .review-estimonial {
   width: 300px;
-  height: 277px;
+  height: 330px;
   flex-shrink: 0;
   border-radius: 10px;
   background: #FCFCFC;
@@ -418,6 +569,40 @@ text {
   letter-spacing: -0.24px;
 }
 
+.re-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+@media (max-width: 390px) {
+  .review-text {
+    color: #000;
+    text-align: center;
+    font-family: Libre Baskerville;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .review {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  .Img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 12px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
+  }
+  .re-img {
+    height: 100px;
+    flex-shrink: 0;
+  }
+}
 .navbar {
   width: 1440px;
   height: 116px;
@@ -436,7 +621,8 @@ text {
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
   letter-spacing: -0.3px;
 }
 
@@ -471,6 +657,182 @@ text {
   fill: #CBB26A;
 }
 
+@media (max-width: 390px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    /* Ändra till kolumnlayout */
+    padding: 10px;
+    /* Lägg till utrymme mellan elementen */
+    height: 90px;
+  }
+  .navbar-link {
+    padding: 10px;
+    text-align: center;
+    /* Centrera texten */
+  }
+  .navbar-link ul {
+    flex-direction: column;
+    /* Ändra till kolumnlayout */
+  }
+  .navbar-link li {
+    margin-right: 0;
+    /* Ta bort marginalen mellan länkarna */
+    margin-bottom: 10px;
+    /* Lägg till utrymme mellan länkarna */
+  }
+  .navbar-icon svg {
+    width: 30px;
+    /* Minska ikonstorleken */
+    height: 30px;
+    height: 85.469px;
+  }
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 300px;
+  flex-shrink: 0;
+  margin: 52px 122px 13px 118px;
+  border-radius: 10px;
+  box-shadow: 1px 5px gainsboro;
+}
+
+.card-one {
+  display: flex;
+}
+.card-one img {
+  width: 330px;
+  height: 300px;
+  border-radius: 15px 0px 0px 15px;
+  position: relative;
+}
+.card-one p {
+  background-color: aliceblue;
+  border-radius: 20px;
+  margin: 39px 20px 226px 210px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: absolute;
+  width: 100px;
+  height: 35px;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Lora;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 250px;
+}
+.card-two div {
+  display: flex;
+  padding: 2px;
+  margin-bottom: 15px;
+}
+
+.price {
+  width: 190px;
+  height: 35px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  color: #000;
+  text-align: center;
+  font-family: Lora;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  box-shadow: 5px 5px 5px 5px gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cainName {
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.description {
+  color: #000;
+  font-family: Lora;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.grades {
+  color: #000;
+  text-align: center;
+  font-family: Lora;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-three {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-three button {
+  display: flex;
+  width: 180px;
+  height: 52px;
+  padding: 11px 38px 10px 35px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #D8C690;
+  border: none;
+  border-radius: 15px;
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 59px;
+}
+.card-three div {
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 390px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 330px;
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 1px 5px gainsboro;
+  }
+}
 * {
   margin: 0;
   padding: 0;
