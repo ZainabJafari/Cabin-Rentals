@@ -16,7 +16,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/cabinlist' element={<CabinListing />}/>
-        <Route path='/details' element={<Details />}/>
+        <Route path='/details/:id' element={<Details />}/>
       </Routes>
      </Router>
      </CabinsContextProvider>

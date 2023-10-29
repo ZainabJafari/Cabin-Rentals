@@ -33,12 +33,12 @@ class HomeSliderPart extends Component {
                 <div className='slide'>
                     <img src={images[currentSlide]} alt="imgaes" />
                     <button onClick={this.nextSlide} className='next-button'> <svg xmlns="http://www.w3.org/2000/svg" width="33" height="58" viewBox="0 0 33 58" fill="none">
-                        <line x1="31.0521" y1="27.7678" x2="2.7678" y2="56.052" stroke="white" stroke-width="5" />
-                        <line x1="30.5165" y1="30.7678" x2="2.23227" y2="2.48349" stroke="white" stroke-width="5" />
+                        <line x1="31.0521" y1="27.7678" x2="2.7678" y2="56.052" stroke="white" strokeWidth="5" />
+                        <line x1="30.5165" y1="30.7678" x2="2.23227" y2="2.48349" stroke="white" strokeWidth="5" />
                     </svg> </button>
                     <button onClick={this.previousSlide} className='before-button'><svg xmlns="http://www.w3.org/2000/svg" width="33" height="58" viewBox="0 0 33 58" fill="none">
-                        <line x1="2.23223" y1="30.2322" x2="30.5165" y2="1.94796" stroke="white" stroke-width="5" />
-                        <line x1="2.76777" y1="27.2322" x2="31.052" y2="55.5165" stroke="white" stroke-width="5" />
+                        <line x1="2.23223" y1="30.2322" x2="30.5165" y2="1.94796" stroke="white" strokeWidth="5" />
+                        <line x1="2.76777" y1="27.2322" x2="31.052" y2="55.5165" stroke="white" strokeWidth="5" />
                     </svg></button>
                 </div>
             </div>

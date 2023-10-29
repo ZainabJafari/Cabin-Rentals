@@ -1,13 +1,17 @@
-import React, { useContext , useEffect} from 'react'
+import React, { useContext , useEffect, useState} from 'react'
 import Stars from '../../Components/Icons/Stars'
 import Like from '../../Components/Icons/Like'
 import {CabinsContext} from '../../Context/cabinContext'
+import {Link} from 'react-router-dom'
+
 const CabinList = () => {
 
     const {getAllCabins, getData } = useContext(CabinsContext)
     useEffect(() => {
         getAllCabins()
     }, [])
+
+
 
     return (
         <div>
@@ -33,7 +37,7 @@ const CabinList = () => {
                     </div>
                     <div className='card-three'>
                        <div><Like /></div> 
-                        <button>View deal</button>
+                        <Link to={`/details/${cabin._id}`}> <button>View deal</button></Link>
                     </div>
                  </div>
                 </div>

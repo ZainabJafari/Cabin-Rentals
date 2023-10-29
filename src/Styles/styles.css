@@ -271,7 +271,6 @@
   position: absolute;
   margin-top: 270px;
   border: 1px solid;
-  stroke-width: 1px;
   stroke: #BFBFBF;
   background-color: #BFBFBF;
   color: #000;
@@ -815,6 +814,7 @@ text {
   font-weight: 400;
   line-height: normal;
   margin-right: 59px;
+  text-decoration: none;
 }
 .card-three div {
   margin-left: 60px;
@@ -833,6 +833,10 @@ text {
     box-shadow: 1px 5px gainsboro;
   }
 }
+.slider {
+  background-color: aqua;
+}
+
 * {
   margin: 0;
   padding: 0;

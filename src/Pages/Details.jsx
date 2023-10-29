@@ -1,8 +1,11 @@
 import React from 'react'
+import ImageDetailCabin from '../Components/DetailComponents/imageDetailCabin'
 
 const Details = () => {
   return (
-    <div>Details</div>
+    <div>
+      <ImageDetailCabin />
+    </div>
   )
 }
 
