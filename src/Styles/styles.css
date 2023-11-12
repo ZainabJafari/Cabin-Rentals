@@ -833,11 +833,415 @@ text {
     box-shadow: 1px 5px gainsboro;
   }
 }
-.slider {
-  background-color: aqua;
+.detail-img {
+  width: 1120px;
+  height: 840px;
+  flex-shrink: 0;
+  margin: 41px 175px 10px 145px;
+}
+
+.img-carosel {
+  width: 223px;
+  height: 155px;
+  flex-shrink: 0;
+}
+
+/* i din CSS-fil */
+/* i din CSS-fil */
+.image-carousel-container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  max-width: 300px;
+  /* Anpassa bredden efter dina behov */
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image {
+  width: 25%;
+}
+
+.carousel.slide {
+  margin: 0;
+  position: relative;
+  text-align: center;
+  background-color: red;
+}
+
+.slide-selected {
+  background-color: red;
+}
+
+@media (max-width: 390px) {
+  .image-carousel-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 800px;
+    /* Anpassa bredden efter dina behov */
+    margin: 0 auto;
+  }
+  .image-carousel-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  .detail-img {
+    width: 100%;
+    height: 340px;
+  }
+}
+.detail-facilities-text {
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 272px;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  margin-left: 266px;
+  margin-top: 70px;
+}
+
+.common-icon {
+  display: flex;
+}
+.common-icon p {
+  padding: 20px;
+}
+
+.icon-list-row {
+  display: flex;
+}
+
+.row-one-list {
+  padding: 15px;
+  margin-left: 266px;
+}
+
+.listing {
+  display: flex;
+}
+
+.description-text {
+  padding: 5px;
+  display: flex;
+}
+.description-text div {
+  padding-right: 15px;
+  color: #000;
+  font-family: Lora;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.description-icon {
+  padding-left: 15px;
+}
+
+.icluded-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  padding: 10px;
+}
+
+.included {
+  padding: 10px;
+  text-align: center;
+  margin-left: 260px;
+  color: #000;
+  font-family: Lora;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  list-style: none;
+}
+.included svg {
+  padding-right: 10px;
+}
+
+.included-text {
+  margin: 25px 0px 30px 270px;
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reserv-text {
+  padding: 20px;
+}
+.reserv-text div {
+  display: flex;
+  justify-content: space-around;
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.reserv-text svg {
+  margin-left: 15px;
+}
+
+.reserv-price {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rectangle-reserv {
+  border: 1px solid;
+  box-shadow: 5px 5px 5px 5px rgb(223, 218, 218);
+  width: 399px;
+  height: 259px;
+  flex-shrink: 0;
+  float: right;
+  margin-top: 10px;
+  margin: 11px 60px 0px 50px;
+  border-radius: 20px;
+  border: none;
+}
+.rectangle-reserv p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.rectangle-reserv button {
+  display: flex;
+  width: 321.698px;
+  height: 54.466px;
+  padding: 11px 114.698px 12.466px 106px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #D8C690;
+  border: none;
+  margin-left: 45px;
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.detail-part-two {
+  float: left;
+}
+
+@media (max-width: 390px) {
+  .icon-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .part-one {
+    margin: 0px;
+    padding: 0%;
+  }
+  .rectangle-reserv {
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgb(223, 218, 218);
+    border-radius: 20px;
+    width: 390px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 390px;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    height: 115px;
+  }
+  .rectangle-reserv button {
+    width: 141px;
+    height: 43px;
+    margin-right: 90px;
+  }
+  .rectangle-reserv .reserv-text {
+    text-align: center;
+    border: 1px solid;
+    padding: 5px;
+    width: 128px;
+    height: 82px;
+    flex-shrink: 0;
+    float: left;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .rectangle-reserv .reserv-price {
+    float: right;
+  }
+  .rectangle-reserv .icluded-container {
+    padding: 10px;
+  }
+  .row-one-list {
+    padding: 10px;
+    margin: 0px;
+  }
+  .included {
+    color: #000;
+    font-family: Lora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: none;
+  }
+  .common-icon {
+    padding: 5px;
+  }
+  .description-text {
+    padding: 2px;
+  }
+  .included-text {
+    color: #000;
+    font-family: Lora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.booking-information h3 {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 40px 0px 0px 100px;
+}
+
+.info {
+  margin: 28px 50px 0px 90px;
+  background-color: #F0F0F0;
+  width: 1266px;
+  height: 1962px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #F0F0F0;
+}
+.info p {
+  padding: 20px;
+}
+
+.baner {
+  width: 1266px;
+  height: 110px;
+  left: 87px;
+  top: 184px;
+  background-color: #486349;
+  border-radius: 10px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+}
+.baner p {
+  padding: 40px 0px 0px 60px;
+}
+
+.booking-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 70px;
+}
+
+.line {
+  width: 1156px;
+  height: 1px;
+}
+
+.btn-btn-submit {
+  display: flex;
+  width: 287px;
+  height: 52px;
+  padding: 11px 50px 10px 48px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #D8C690;
+  margin-top: 350px;
+  margin-left: 60%;
+  border: none;
+  color: #000;
+  text-align: center;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.register {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.pay-metod {
+  display: flex;
+  flex-direction: column;
+}
+.pay-metod img {
+  padding: 10px;
+}
+
+.input-form input {
+  width: 500px;
+  height: 41px;
+  background-color: #E5E5E5;
+  border: none;
+  margin: 20px;
+}
+.input-form label {
+  display: block;
+  margin-left: 20px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+.general-text {
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }/*# sourceMappingURL=styles.css.map */

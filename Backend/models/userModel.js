@@ -1,14 +1,14 @@
 const User = require('../schemas/userSchema')
 
 exports.createNewUser = (req, res) => {
-    const {fullName, email, phoneNummer, adress, streetAdress, city, state} = req.body;
+    const {fullName, email, phoneNummer, streetAdress, city, state} = req.body;
 
-    if(!fullName || !email || !phoneNummer || ! adress || !streetAdress || !city || !state ){
+    if(!fullName || !email || !phoneNummer || !streetAdress || !city || !state ){
         res.status(404).json({message: 'You need toenter all the fileds'})
         return
     }
 
-    User.create({fullName, email, phoneNummer, adress, streetAdress, city, state  })
+    User.create({fullName, email, phoneNummer, streetAdress, city, state  })
     .then(data => {
         res.status(201).json(data)
     })

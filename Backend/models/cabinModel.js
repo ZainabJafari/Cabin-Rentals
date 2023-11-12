@@ -1,16 +1,16 @@
 const Cabin = require('../schemas/cabinSchema')
 
 exports.createNewCabin = (req, res) => {
-    const {cabinName, price, description, category, imageURL, property, images } = req.body;
+    const {cabinName, price, description, category, imageURL, property, images, included } = req.body;
 
-    if(!cabinName || !price || !description || !category || !imageURL || !property || !images){
+    if(!cabinName || !price || !description || !category || !imageURL || !property || !images || !included){
         res.status(400).json({
             message: 'You need to enter all the fields'
         })
         return
     }
 
-    Cabin.create({cabinName, price, description, category, imageURL, property, images})
+    Cabin.create({cabinName, price, description, category, imageURL, property, images, included})
     .then(data => {
         res.status(201).json(data)
     })

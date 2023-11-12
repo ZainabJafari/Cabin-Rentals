@@ -1,0 +1,80 @@
+.booking-information {
+    h3 {
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 40px 0px 0px 100px;
+    }
+}
+
+.info {
+    margin: 28px 50px 0px 90px;
+    background-color: #F0F0F0;
+    width: 1266px;
+    height: 1962px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F0F0F0;
+
+    p {
+        padding: 20px;
+    }
+
+}
+
+.baner {
+    width: 1266px;
+    height: 110px;
+    left: 87px;
+    top: 184px;
+    background-color: #486349;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+
+    p {
+        padding: 40px 0px 0px 60px;
+    }
+
+}
+
+.booking-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 70px;
+}
+
+.line {
+    width: 1156px;
+    height: 1px;
+}
+
+.btn-btn-submit {
+    display: flex;
+    width: 287px;
+    height: 52px;
+    padding: 11px 50px 10px 48px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #D8C690;
+    margin-top: 350px;
+    margin-left: 60%;
+    border: none;
+    color: #000;
+    text-align: center;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

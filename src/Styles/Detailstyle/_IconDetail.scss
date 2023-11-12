@@ -1,0 +1,266 @@
+.detail-facilities-text {
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    // text-align: center;
+    margin-left: 272px;
+}
+
+.icon-list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 266px;
+    margin-top: 70px;
+}
+
+.common-icon {
+    display: flex;
+
+    p {
+        padding: 20px;
+
+    }
+}
+
+.icon-list-row {
+    display: flex;
+}
+
+.row-one-list {
+    padding: 15px;
+    margin-left: 266px;
+}
+
+.listing {
+    display: flex;
+}
+
+.description-text {
+    padding: 5px;
+    display: flex;
+
+    div {
+        padding-right: 15px;
+        color: #000;
+        font-family: Lora;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.description-icon {
+    padding-left: 15px;
+}
+
+.icluded-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    padding: 10px;
+}
+
+.included {
+    padding: 10px;
+    text-align: center;
+    margin-left: 260px;
+    color: #000;
+    font-family: Lora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    list-style: none;
+
+    svg {
+        padding-right: 10px;
+    }
+}
+
+.included-text {
+    margin: 25px 0px 30px 270px;
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.reserv-text {
+
+    padding: 20px;
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        color: #000;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    svg {
+        margin-left: 15px;
+    }
+}
+
+.reserv-price {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rectangle-reserv {
+    border: 1px solid;
+    box-shadow: 5px 5px 5px 5px rgb(223, 218, 218);
+    width: 399px;
+    height: 259px;
+    flex-shrink: 0;
+    float: right;
+    margin-top: 10px;
+    margin: 11px 60px 0px 50px;
+    border-radius: 20px;
+    border: none;
+
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    button {
+        display: flex;
+        width: 321.698px;
+        height: 54.466px;
+        padding: 11px 114.698px 12.466px 106px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #D8C690;
+        border: none;
+        // margin: 10px 9px 0px 42px;
+        // margin-top: 50px;
+        margin-left: 45px;
+        color: #000;
+        font-family: Lora;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}
+
+.detail-part-two {
+    float: left;
+}
+
+
+@media (max-width: 390px) {
+    .icon-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .part-one {
+        margin: 0px;
+        padding: 0%;
+    }
+
+
+    .rectangle-reserv {
+        border: 1px solid;
+        box-shadow: 5px 5px 5px rgb(223, 218, 218);
+        border-radius: 20px;
+        width: 390px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 390px;
+        background-color: #fff;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        height: 115px;
+
+
+        button {
+            width: 141px;
+            height: 43px;
+            margin-right: 90px;
+
+        }
+
+        .reserv-text {
+            text-align: center;
+            border: 1px solid;
+            padding: 5px;
+            width: 128px;
+            height: 82px;
+            flex-shrink: 0;
+            float: left;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+        }
+
+        .reserv-price {
+            float: right;
+
+        }
+
+        .icluded-container {
+            padding: 10px;
+
+        }
+
+    }
+
+    .row-one-list {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .included {
+        color: #000;
+        font-family: Lora;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        list-style: none;
+    }
+
+    .common-icon {
+        padding: 5px;
+    }
+
+    .description-text {
+        padding: 2px;
+    }
+
+    .included-text {
+        color: #000;
+        font-family: Lora;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+}

@@ -1,6 +1,7 @@
 import {createContext, useState} from 'react'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 export const CabinsContext = createContext(null)
@@ -19,13 +20,19 @@ export const CabinsContextProvider = (props) => {
     }
 
     const cabinGetById = async () => {
-       const result =  await axios.get('http://localhost:7777/api/cabin/' + id)
-     if(result.data){
-       setCabinDetail(result.data)} 
-    }
+      try {
+          const result = await axios.get('http://localhost:7777/api/cabin/' + id);
+          if (result.data) {
+              setCabinDetail(result.data);
+              console.log(result.data);
+          }
+      } catch (error) {
+          console.error(error);
+      }
+  }
+
    
 
-    const cabinContextValue = {getAllCabins, getData, cabinGetById, getCabinDetail}
+  const cabinContextValue = {getAllCabins, getData, cabinGetById, getCabinDetail, id }
     return <CabinsContext.Provider value={cabinContextValue}>{props.children}</CabinsContext.Provider>
 }
-//

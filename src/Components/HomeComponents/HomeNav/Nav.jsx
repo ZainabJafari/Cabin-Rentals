@@ -1,10 +1,44 @@
-import React from 'react'
 import logo from '../../../assets/logo.png'
 import HomeNavDropdown from './HomeNavDropdown'
+import DateSelector from './DateSelector'
+import React, { useState, useContext } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { DateContext } from '../../../Context/dateContext'
+import { parseISO } from 'date-fns';
+
+
+
 
 const Nav = () => {
 
+  const { startDate, endDate, updateStartDate, updateEndDate } = useContext(DateContext)
+
+  const handleStartDateChange = (selectedStartDate) => {
+    console.log('Selected Start Date:', selectedStartDate);
+    try {
+      if (selectedStartDate) {
+        const parsedStartDate = parseISO(selectedStartDate);
+        updateStartDate(parsedStartDate);
+      }
+    } catch (error) {
+      console.error('Error parsing Start Date:', error);
+    }
+  };
   
+  const handleEndDateChange = (selectedEndDate) => {
+    console.log('Selected End Date:', selectedEndDate);
+    try {
+      if (selectedEndDate) {
+        const parsedEndDate = parseISO(selectedEndDate);
+        updateEndDate(parsedEndDate);
+      }
+    } catch (error) {
+      console.error('Error parsing End Date:', error);
+    }
+  };
+  
+
   return (
     <div className='card'>
       <div className='navlink'>
@@ -26,10 +60,19 @@ const Nav = () => {
         <div className='hero-container'>
           <div className='dropdown'>
             <p className='hero-text'>Check in</p>
-            <p className='date'>When?</p>
+            <p className='date'>When?
+              <DatePicker
+                selected={startDate}
+                onChange={handleStartDateChange}
+                selectsStart
+                startDate={startDate}
+                endDate={endDate}
+                placeholderText="When"
+              />
+            </p>
           </div>
           <div>
-          <p className='last'><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
+            <p className='last'><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
               <path d="M3.5625 0L0 3.5625L9.5 13.0625L19 3.5625L15.4375 0L9.5 5.9375L3.5625 0Z" fill="#A0A0A0" />
             </svg></p>
           </div>
@@ -38,7 +81,17 @@ const Nav = () => {
         <div className='hero-container'>
           <div className='dropdown'>
             <p className='hero-text'>Check out</p>
-            <p className='date'>When?</p>
+            <p className='date'>When?
+              <DatePicker
+                selected={endDate}
+                onChange={handleEndDateChange}
+                selectsEnd
+                startDate={startDate}
+                endDate={endDate}
+                placeholderText="When"
+              />
+
+            </p>
           </div>
           <div>
             <p className='last'><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
@@ -52,7 +105,7 @@ const Nav = () => {
             <p className='date'>All</p>
           </div>
           <div>
-          <HomeNavDropdown />
+            <HomeNavDropdown />
 
           </div>
         </div>
@@ -62,7 +115,6 @@ const Nav = () => {
           </svg>
         </div>
       </div>
-
     </div>
   )
 }

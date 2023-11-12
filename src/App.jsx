@@ -5,20 +5,25 @@ import Footer from './Components/Footer/Footer'
 import Home from './Pages/Home'
 import CabinListing from './Pages/CabinListing'
 import {CabinsContextProvider} from './Context/cabinContext'
+import {DateProvider} from './Context/dateContext'
 import Details from './Pages/Details'
+import BookingConfirm from './Pages/BookingConfirm'
 
 
 const App = () => {
   return (
     <>
     <CabinsContextProvider>
+    <DateProvider>
      <Router>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/cabinlist' element={<CabinListing />}/>
         <Route path='/details/:id' element={<Details />}/>
+        <Route path='/bookingInformation' element={<BookingConfirm />}/>
       </Routes>
      </Router>
+     </DateProvider>
      </CabinsContextProvider>
      {/* <Footer /> */}
     </>

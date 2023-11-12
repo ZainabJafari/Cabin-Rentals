@@ -6,9 +6,21 @@
 @import "homeReview";
 @import "navbar";
 @import "_cabinListing";
-@import "./Detailstyle/sliderImag";
+@import "./Detailstyle/ImageDetailCabin";
+@import "./Detailstyle/IconDetail";
+@import "./BookingPageStyle/bookingInformation";
+@import "./BookingPageStyle/useRegister";
 
-*{
+* {
     margin: 0;
     padding: 0;
+}
+
+.general-text {
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

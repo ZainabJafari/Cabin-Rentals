@@ -1,0 +1,36 @@
+.register {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.pay-metod {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        padding: 10px;
+    }
+}
+
+.input-form {
+
+    input {
+        width: 500px;
+        height: 41px;
+        background-color: #E5E5E5;
+        border: none;
+        margin: 20px;
+    }
+
+    label {
+        display: block;
+        margin-left: 20px;
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}

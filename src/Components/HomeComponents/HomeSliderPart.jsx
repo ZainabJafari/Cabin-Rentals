@@ -49,38 +49,3 @@ class HomeSliderPart extends Component {
 
 export default HomeSliderPart
 
-
-// import React, { Component } from 'react';
-// // import acti2 from '../../assets/acti2.jpeg'
-// import acti2 from '../../assets/homeImg1.png'
-// import acti3 from '../../assets/homeImg2.png'
-
-// class ImageSlider extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       currentSlide: 0,
-//       images: [
-//        acti2, acti3
-//       ],
-//     };
-//   }
-
-//   nextSlide = () => {
-//     this.setState((prevState) => ({
-//       currentSlide: (prevState.currentSlide + 1) % this.state.images.length,
-//     }));
-//   }
-
-//   render() {
-//     const { currentSlide, images } = this.state;
-//     return (
-//       <div className="slider">
-//         <img src={images[currentSlide]} alt={`Bild ${currentSlide + 1}`} />
-//         <button onClick={this.nextSlide} className='next-button'>Next</button>
-//       </div>
-//     );
-//   }
-// }
-
-// export default ImageSlider;
