@@ -3,11 +3,13 @@ import img1 from '../../assets/image 179.png'
 import img2 from '../../assets/image 180.png'
 import img3 from '../../assets/image 181.png'
 import img4 from '../../assets/image 182.png'
+import {Link} from 'react-router-dom'
 
 const UserRegister = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
+    password: '',
     phoneNummer: '',
     streetAdress: '',
     city: '',
@@ -40,6 +42,7 @@ const UserRegister = () => {
         setFormData({
           fullName: '',
           email: '',
+          password: '',
           phoneNummer: '',
           streetAdress: '',
           city: '',
@@ -77,6 +80,18 @@ const UserRegister = () => {
           id="email"
           name="email"
           value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <div>
+      <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={formData.password}
           onChange={handleChange}
           required
         />
@@ -132,7 +147,7 @@ const UserRegister = () => {
         />
       </div>
 
-      <button className='btn-btn-submit' type="submit">Confirm Booking</button>
+     <Link to={'/paymentConfirmation'}><button className='btn-btn-submit' type="submit">Confirm Booking</button></Link> 
     </form>
             
     </div>

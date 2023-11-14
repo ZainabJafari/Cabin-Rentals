@@ -656,6 +656,13 @@ text {
   fill: #CBB26A;
 }
 
+.navbar-link-li {
+  text-decoration: none;
+  color: #CBB26A;
+  font-family: Libre Baskerville;
+  font-size: 20px;
+}
+
 @media (max-width: 390px) {
   .navbar {
     width: 100%;
@@ -824,13 +831,123 @@ text {
 @media (max-width: 390px) {
   .list {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    width: 330px;
+    height: 330px;
+    flex-shrink: 0;
+    margin: 49px 30px 1px 35px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px 1px gainsboro;
+    position: relative;
+  }
+  .card-one {
+    display: flex;
+  }
+  .card-one img {
     width: 330px;
     height: 180px;
     flex-shrink: 0;
-    border-radius: 10px;
-    box-shadow: 1px 5px gainsboro;
+    border-radius: 15px 15px 0px 15px;
+    position: relative;
+  }
+  .card-one p {
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin: 120px 50px 226px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: Lora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .card-two {
+    display: flex;
+    margin-right: 0px;
+    position: absolute;
+  }
+  .card-two div {
+    display: flex;
+    padding: 1px;
+    margin-bottom: 1px;
+    margin-top: 90px;
+  }
+  .card-two p {
+    padding: 0%;
+    font-size: 16px;
+  }
+  .card-three {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  .card-three button {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    padding: 1px 8px 1px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #D8C690;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+    font-family: Lora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    margin: 170px 40px 0px 190px;
+  }
+  .card-three .cabin-like {
+    margin: 20px 40px 0px 200px;
+  }
+  .price {
+    margin-top: 160px;
+    margin-left: 5px;
+    position: absolute;
+    background-color: white;
+    width: 140px;
+    font-size: 14px;
+  }
+  .cainName {
+    margin-top: 205px;
+    margin-left: 5px;
+    position: absolute;
+  }
+  .grades {
+    margin-top: 200px;
+    margin-left: 10px;
+  }
+  .star {
+    margin-top: 130px;
+  }
+  .star span {
+    margin-top: 105px;
+    height: 1px;
+    width: 20px;
+  }
+  .description {
+    margin-top: 230px;
+    margin-left: 10px;
+    position: absolute;
+  }
+  .cabin-category {
+    margin-left: 50px;
+    background-color: #000;
+    position: absolute;
   }
 }
 .detail-img {
@@ -846,9 +963,24 @@ text {
   flex-shrink: 0;
 }
 
-/* i din CSS-fil */
-/* i din CSS-fil */
-.image-carousel-container {
+.carousel-images {
+  width: 8px;
+  background-color: aqua;
+}
+
+li.slide.selected {
+  width: 0px;
+  background-color: rgb(107, 48, 48);
+  height: 0px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  margin-left: 500px;
+}
+
+.slider-wrapper axis-horizontal .image-carousel-container {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
   max-width: 300px;
@@ -903,18 +1035,23 @@ text {
   margin-left: 272px;
 }
 
+.part-one {
+  float: left;
+}
+
 .icon-list {
   display: flex;
   flex-direction: row;
-  margin-left: 266px;
+  margin-left: 280px;
   margin-top: 70px;
+  padding: 15px;
 }
 
 .common-icon {
   display: flex;
 }
 .common-icon p {
-  padding: 20px;
+  padding: 40px;
 }
 
 .icon-list-row {
@@ -953,12 +1090,14 @@ text {
   grid-template-columns: repeat(2, 1fr);
   gap: 0px;
   padding: 10px;
+  float: left;
 }
 
 .included {
   padding: 10px;
   text-align: center;
   margin-left: 260px;
+  margin-top: 30px;
   color: #000;
   font-family: Lora;
   font-size: 16px;
@@ -972,13 +1111,14 @@ text {
 }
 
 .included-text {
-  margin: 25px 0px 30px 270px;
+  margin: 5px 50px 50px 250px;
   color: #000;
   font-family: Lora;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  float: left;
 }
 
 .reserv-text {
@@ -1017,10 +1157,10 @@ text {
   height: 259px;
   flex-shrink: 0;
   float: right;
-  margin-top: 10px;
-  margin: 11px 60px 0px 50px;
+  margin-right: 118px;
   border-radius: 20px;
   border: none;
+  margin-bottom: 300px;
 }
 .rectangle-reserv p {
   display: flex;
@@ -1048,18 +1188,29 @@ text {
   line-height: normal;
 }
 
-.detail-part-two {
-  float: left;
-}
-
 @media (max-width: 390px) {
   .icon-list {
     display: flex;
     flex-direction: row;
+    margin-left: 6px;
+    margin-top: 7px;
+  }
+  .detail-part-two {
+    float: left;
+    margin-left: 10px;
   }
   .part-one {
     margin: 0px;
     padding: 0%;
+  }
+  .detail-facilities-text {
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 20px;
   }
   .rectangle-reserv {
     border: 1px solid;
@@ -1094,12 +1245,21 @@ text {
   .rectangle-reserv .reserv-price {
     float: right;
   }
-  .rectangle-reserv .icluded-container {
-    padding: 10px;
+  .icluded-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    margin-right: 10px;
   }
   .row-one-list {
     padding: 10px;
     margin: 0px;
+  }
+  li.included {
+    margin: 0;
+  }
+  p.included-text {
+    margin: 10px;
   }
   .included {
     color: #000;
@@ -1119,7 +1279,94 @@ text {
   .included-text {
     color: #000;
     font-family: Lora;
-    font-size: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.reviews-img {
+  width: 63px;
+  height: 62.906px;
+  flex-shrink: 0;
+}
+
+.reviews {
+  display: flex;
+  margin-top: 900px;
+  margin-left: 256px;
+}
+
+.re {
+  display: flex;
+}
+
+.reviews-star {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 10px;
+  display: flex;
+  width: 143.768px;
+  height: 41.053px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4.357px;
+  flex-shrink: 0;
+}
+
+.reviews-text {
+  width: 100px;
+  padding: 20px;
+  width: 192.563px;
+  height: 173.684px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Lora;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+}
+
+.r-text {
+  margin: 66px 10px 40px 266px;
+  color: #000;
+  font-family: Lora;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reviews-container {
+  margin-left: 256px;
+  margin-right: 278px;
+}
+
+.user-review {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 390px) {
+  .user-review {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .reviews-container {
+    margin-left: 56px;
+    margin-right: 8px;
+  }
+  .r-text {
+    margin: 66px 10px 40px 26px;
+    color: #000;
+    font-family: Lora;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1132,27 +1379,28 @@ text {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 40px 0px 0px 100px;
+  margin: 40px 0px 0px 5%;
 }
 
 .info {
-  margin: 28px 50px 0px 90px;
+  margin: 28px 5%;
   background-color: #F0F0F0;
-  width: 1266px;
-  height: 1962px;
+  width: 90%;
+  max-width: 1266px;
+  height: auto;
   flex-shrink: 0;
   border-radius: 10px;
   background: #F0F0F0;
 }
 .info p {
   padding: 20px;
+  margin: 20px;
 }
 
 .baner {
-  width: 1266px;
+  width: 100%;
+  max-width: 1266px;
   height: 110px;
-  left: 87px;
-  top: 184px;
   background-color: #486349;
   border-radius: 10px;
   color: #FFF;
@@ -1164,18 +1412,20 @@ text {
   margin-top: 10px;
 }
 .baner p {
-  padding: 40px 0px 0px 60px;
+  padding: 40px 0px 0px 5%;
 }
 
 .booking-container {
   display: flex;
-  justify-content: space-around;
-  padding: 70px;
+  flex-direction: row;
+  padding: 60px;
 }
 
 .line {
-  width: 1156px;
+  width: 90%;
+  max-width: 1156px;
   height: 1px;
+  margin: 20px auto;
 }
 
 .btn-btn-submit {
@@ -1188,22 +1438,69 @@ text {
   flex-shrink: 0;
   border-radius: 15px;
   background: #D8C690;
-  margin-top: 350px;
-  margin-left: 60%;
-  border: none;
-  color: #000;
   text-align: center;
   font-family: Lora;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 100px 50px 20px 500px;
+  border: none;
 }
 
+@media only screen and (max-width: 390px) {
+  .booking-container {
+    flex-direction: row;
+    padding: 0px;
+  }
+  .baner {
+    height: 35px;
+  }
+  .baner p {
+    padding: 9px;
+  }
+  .booking-information h3 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px 0px 0px;
+  }
+  .info {
+    margin: 10px 8%;
+  }
+  .info p {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .btn-btn-submit {
+    display: flex;
+    width: 108px;
+    height: 35px;
+    padding: 11px 8px 9px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #D8C690;
+    text-align: center;
+    font-family: Lora;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0px 0px 0px;
+    border: none;
+  }
+}
 .register {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  margin-top: 50px;
 }
 
 .pay-metod {
@@ -1211,27 +1508,120 @@ text {
   flex-direction: column;
 }
 .pay-metod img {
-  padding: 10px;
+  padding: 5px;
 }
 
+.input-form {
+  width: 50%;
+}
 .input-form input {
-  width: 500px;
+  width: 100%;
   height: 41px;
   background-color: #E5E5E5;
   border: none;
-  margin: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  height: 41px;
 }
 .input-form label {
   display: block;
-  margin-left: 20px;
+  margin: 5px 0;
   color: #000;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-left: 15px;
 }
 
+@media only screen and (max-width: 390px) {
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .pay-metod {
+    display: flex;
+    flex-direction: column;
+  }
+  .pay-metod img {
+    padding: 10px;
+    max-width: 30%;
+    height: auto;
+  }
+  .input-form {
+    width: 200px;
+    margin-right: 100px;
+  }
+  .input-form input {
+    width: 100%;
+    height: 30px;
+    background-color: #E5E5E5;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 0px;
+  }
+  .input-form label {
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.payment-confirmation {
+  text-align: center;
+  background-color: #F0F0F0;
+  height: 60vh;
+  width: 85%;
+  margin: 39px 86px 40px 88px;
+}
+.payment-confirmation h3 {
+  margin-top: 40px;
+}
+.payment-confirmation p {
+  padding: 10px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.baner svg {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 390px) {
+  .payment-confirmation {
+    text-align: center;
+    background-color: #F0F0F0;
+    height: 90vh;
+    width: 85%;
+    margin: 0px 0px 40px 40px;
+  }
+  .payment-confirmation h3 {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  .payment-confirmation p {
+    padding: 10px;
+    color: #000;
+    font-family: Lora;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+  }
+  .baner svg {
+    margin-top: 40px;
+    height: 30px;
+  }
+}
 * {
   margin: 0;
   padding: 0;

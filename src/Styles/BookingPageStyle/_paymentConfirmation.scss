@@ -1,0 +1,58 @@
+.payment-confirmation {
+    text-align: center;
+    background-color: #F0F0F0;
+    height: 60vh;
+    width: 85%;
+    margin: 39px 86px 40px 88px;
+
+    h3 {
+        margin-top: 40px;
+    }
+
+    p {
+        padding: 10px;
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+    }
+}
+
+.baner {
+    svg {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px){
+    .payment-confirmation {
+        text-align: center;
+        background-color: #F0F0F0;
+        height: 90vh;
+        width: 85%;
+        margin: 0px 0px 40px 40px;
+    
+        h3 {
+            margin-top: 40px;
+            font-size: 16px;
+
+        }
+    
+        p {
+            padding: 10px;
+            color: #000;
+            font-family: Lora;
+            font-size: 16px;
+            font-style: normal;
+            line-height: normal;
+        }
+    }
+    .baner {
+        svg {
+            margin-top: 40px;
+            height: 30px;
+        }
+    }
+
+}

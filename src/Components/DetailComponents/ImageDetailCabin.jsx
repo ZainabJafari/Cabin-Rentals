@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import IconsDetail from './IconsDetail';
-import Reviews from '../DetailComponents/Reviews'
 
 
 const ImageDetailCabin = () => {
@@ -36,7 +35,7 @@ const ImageDetailCabin = () => {
                     <Carousel showThumbs={false} selectedItem={currentImageIndex}>
                         {getCabinDetail.images.map((image, index) => (
                             <div className='carousel-image' key={index}>
-                                <img src={image.image} alt={`Image ${index}`} />
+                                <img className='carousel-images' src={image.image} alt={`Image ${index}`} />
                             </div>
                         ))}
                     </Carousel>
@@ -51,8 +50,6 @@ const ImageDetailCabin = () => {
                 </svg></button>
             </div>
             <IconsDetail/>
-            {/* <Reviews /> */}
-
         </div>
     );
 };

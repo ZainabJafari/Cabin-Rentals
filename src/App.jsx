@@ -8,6 +8,7 @@ import {CabinsContextProvider} from './Context/cabinContext'
 import {DateProvider} from './Context/dateContext'
 import Details from './Pages/Details'
 import BookingConfirm from './Pages/BookingConfirm'
+import PaymentConfirmation from './Pages/PaymentConfirmation'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/cabinlist' element={<CabinListing />}/>
         <Route path='/details/:id' element={<Details />}/>
         <Route path='/bookingInformation' element={<BookingConfirm />}/>
+        <Route path='/paymentConfirmation' element={<PaymentConfirmation />}/>
       </Routes>
      </Router>
      </DateProvider>

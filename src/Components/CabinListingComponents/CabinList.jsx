@@ -14,30 +14,34 @@ const CabinList = () => {
 
 
     return (
-        <div>
+        <div className='cabin-list'>
             {getData.map((cabin) => (
                 <div key={cabin._id}>
                 <div className='list'>         
                     <div className='card-one'>
-                        <img src={cabin.imageURL} alt="cabin" />
-                        <p>{cabin.category}</p>
+                        <img className='cabin-img' src={cabin.imageURL} alt="cabin" />
+                        <p className='cabin-category'>{cabin.category}</p>
                     </div>
                     <div className='card-two'>
                         <p className='price'> {cabin.price} kr per night</p>
                         <p className='cainName'>{cabin.cabinName}</p>
                         <p className='description'>{cabin.description}</p>
-                        <div>
+                        <div className='star'>
                            <p className='grades'>4,6</p>
+                           <span><Stars /></span>
+                           <span><Stars /></span>
+                           <span><Stars /></span>
+                           <span><Stars /></span>
+                           <span><Stars /></span>
+                            {/* <Stars />
                             <Stars />
                             <Stars />
-                            <Stars />
-                            <Stars />
-                            <Stars />
+                            <Stars /> */}
                         </div>
                     </div>
                     <div className='card-three'>
-                       <div><Like /></div> 
-                        <Link to={`/details/${cabin._id}`}> <button>View deal</button></Link>
+                       <div className='cabin-like'><Like /></div> 
+                        <Link to={`/details/${cabin._id}`}> <button className='cabin-btn'>View deal</button></Link>
                     </div>
                  </div>
                 </div>

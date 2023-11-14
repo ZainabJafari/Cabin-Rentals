@@ -4,7 +4,7 @@ import ImageDetailCabin from '../Components/DetailComponents/ImageDetailCabin'
 // import { DateProvider } from '../Context/dateContext';
 import {CabinsContextProvider} from '../Context/cabinContext'
 import {DateProvider} from '../Context/dateContext'
-
+import Reviews from '../Components/DetailComponents/Reviews'
 const Details = () => {
   return (
     <div>
@@ -12,7 +12,9 @@ const Details = () => {
       <DateProvider>
 
         <ImageDetailCabin />
+        {/* <Reviews /> */}
         </DateProvider>
+
         </CabinsContextProvider>
     </div>
   )

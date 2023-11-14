@@ -5,23 +5,24 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    // text-align: center;
     margin-left: 272px;
+}
+.part-one{
+    float: left;
 }
 
 .icon-list {
     display: flex;
     flex-direction: row;
-    margin-left: 266px;
+    margin-left: 280px;
     margin-top: 70px;
+    padding: 15px;
 }
 
 .common-icon {
     display: flex;
-
     p {
-        padding: 20px;
-
+        padding: 40px;
     }
 }
 
@@ -62,12 +63,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
     padding: 10px;
+    float: left;
 }
 
 .included {
     padding: 10px;
     text-align: center;
     margin-left: 260px;
+    margin-top: 30px;
     color: #000;
     font-family: Lora;
     font-size: 16px;
@@ -82,13 +85,14 @@
 }
 
 .included-text {
-    margin: 25px 0px 30px 270px;
+    margin: 5px 50px 50px 250px;
     color: #000;
     font-family: Lora;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    float: left;
 }
 
 .reserv-text {
@@ -130,10 +134,10 @@
     height: 259px;
     flex-shrink: 0;
     float: right;
-    margin-top: 10px;
-    margin: 11px 60px 0px 50px;
+    margin-right: 118px;
     border-radius: 20px;
     border: none;
+    margin-bottom: 300px;
 
     p {
         display: flex;
@@ -165,24 +169,30 @@
     }
 
 }
-
-.detail-part-two {
-    float: left;
-}
-
-
 @media (max-width: 390px) {
     .icon-list {
         display: flex;
         flex-direction: row;
+        margin-left: 6px;
+        margin-top: 7px;
     }
-
+    .detail-part-two {
+        float: left;
+        margin-left: 10px;
+    }
     .part-one {
         margin: 0px;
         padding: 0%;
     }
-
-
+    .detail-facilities-text {
+        color: #000;
+        font-family: Lora;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-left: 20px;
+    }
     .rectangle-reserv {
         border: 1px solid;
         box-shadow: 5px 5px 5px rgb(223, 218, 218);
@@ -223,19 +233,23 @@
             float: right;
 
         }
-
-        .icluded-container {
-            padding: 10px;
-
-        }
-
     }
-
+    .icluded-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1px;
+        margin-right: 10px;
+    }
     .row-one-list {
         padding: 10px;
         margin: 0px;
     }
-
+    li.included{
+        margin: 0;
+    }
+    p.included-text{
+        margin: 10px;
+    }
     .included {
         color: #000;
         font-family: Lora;
@@ -257,7 +271,7 @@
     .included-text {
         color: #000;
         font-family: Lora;
-        font-size: 20px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
