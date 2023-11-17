@@ -1,15 +1,17 @@
 const mongoose = require('mongoose')
 const {Schema} = mongoose;
 
-const orderRaderSchema = new Schema({
+const orderSchema = new Schema({
+    userId: {type: Schema.Types.ObjectId, ref: 'User' , required: true },
     cabin: {type: Schema.Types.ObjectId, ref: 'Cabin' , required: true },
-    checkInDate: {type: Number},
-    checkOutDate: {type: Number}
+    checkinDate: {type: String, required: true},
+    checkoutDate: {type: String, required: true},
+    cancellationProtection: {type: Boolean, default: false}
 })
 
-const orderShema = new Schema({
+const userOrderShema = new Schema({
     user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    orderRader: {type: [orderRaderSchema], required: true}
+    orders: {type: [orderSchema], required: true}
 })
 
-module.exports = mongoose.model('Order', orderShema)
+module.exports = mongoose.model('Order', orderSchema)

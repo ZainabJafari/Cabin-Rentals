@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .homeIconPakages {
   display: flex;
   list-style: none;
@@ -197,6 +196,14 @@
   margin-right: 30px;
   list-style: none;
 }
+.navlink-link li {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #090909;
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 4px;
+}
 
 .navlink-link p {
   margin: 10px;
@@ -301,9 +308,13 @@
   background-color: white;
 }
 
+.navbar-link-li {
+  font-size: 25px;
+}
+
 .footer-style {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 1440px;
   height: 489px;
   border-top: 1px solid #E5E5E5;
@@ -323,8 +334,9 @@
 
 .rectangel {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  margin-top: 18px;
+  margin-top: 78px;
   background-color: #E5E5E5;
   width: 549px;
   height: 60px;
@@ -339,7 +351,9 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .space {
@@ -351,6 +365,7 @@
 .email {
   padding-top: 20px;
   padding-left: 60px;
+  font-size: 20px;
 }
 
 .conect-icon {
@@ -418,7 +433,6 @@
   line-height: 24px;
   letter-spacing: -0.225px;
   margin-left: 160px;
-  margin-top: 30px;
 }
 
 .socialIcon {
@@ -442,6 +456,85 @@
   margin-right: 40px;
 }
 
+@media (max-width: 390px) {
+  .footer-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 390px;
+    height: 950px;
+    flex-shrink: 0;
+    border-top: 1px solid #E5E5E5;
+    background: #486349;
+  }
+  .rectangel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 8px;
+    background-color: #E5E5E5;
+    width: 250px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    margin-left: 78px;
+    position: relative;
+  }
+  .followText {
+    color: #FFF;
+    font-family: Libre Baskerville;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 9px;
+    text-align: center;
+  }
+  .logo {
+    width: 350px;
+    margin-left: 100px;
+    text-align: center;
+    width: 200px;
+    height: 122.099px;
+    flex-shrink: 0;
+  }
+  .footer-text {
+    color: #CBB26A;
+    font-family: Lora;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.225px;
+    margin-left: 30px;
+  }
+  .socialIcon {
+    display: flex;
+    list-style: none;
+  }
+  .Subscribe {
+    display: none;
+  }
+  .space {
+    display: none;
+  }
+  .email {
+    padding-top: 15px;
+    padding-right: 230px;
+    font-size: 20px;
+  }
+  .social-part-text {
+    color: #FFF;
+    font-family: Libre Baskerville;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.27px;
+    margin: 3px 5px 20px 140px;
+  }
+}
 .slider {
   position: relative;
   text-align: center;
@@ -602,11 +695,16 @@ text {
     flex-shrink: 0;
   }
 }
+/* Mobilstilar (max bredd 390px) */
+/* Desktop-stilar */
 .navbar {
   width: 1440px;
   height: 116px;
   flex-shrink: 0;
   background: #486349;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-link {
@@ -621,18 +719,7 @@ text {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  /* 120% */
   letter-spacing: -0.3px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  width: 1440px;
-  height: 116px;
-  flex-shrink: 0;
-  background: #486349;
-  align-items: center;
 }
 
 .navbar-link ul {
@@ -663,37 +750,84 @@ text {
   font-size: 20px;
 }
 
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu-links {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 20%;
+  height: 20vh;
+  background-color: #fff;
+  border: 1px solid #575555;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.mobile-menu-links.open {
+  opacity: 1;
+  pointer-events: auto;
+  display: none;
+}
+
+.mobile-menu-links a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+/* Mobilstilar (max bredd 390px) */
 @media (max-width: 390px) {
   .navbar {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    /* Ändra till kolumnlayout */
-    padding: 10px;
-    /* Lägg till utrymme mellan elementen */
+    width: 390px;
     height: 90px;
+    flex-shrink: 0;
+    position: relative;
   }
   .navbar-link {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+  .mobile-menu-links {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 40%;
+    height: 20vh;
+    background-color: #fff;
+    border: 1px solid #575555;
     padding: 10px;
-    text-align: center;
-    /* Centrera texten */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1;
   }
-  .navbar-link ul {
-    flex-direction: column;
-    /* Ändra till kolumnlayout */
+  .mobile-menu-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+    border: 1px solid #CBB26A;
   }
-  .navbar-link li {
-    margin-right: 0;
-    /* Ta bort marginalen mellan länkarna */
-    margin-bottom: 10px;
-    /* Lägg till utrymme mellan länkarna */
-  }
-  .navbar-icon svg {
-    width: 30px;
-    /* Minska ikonstorleken */
-    height: 30px;
-    height: 85.469px;
+  .mobile-menu-links a {
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    padding: 5px;
   }
 }
 .list {
@@ -1448,6 +1582,14 @@ li.slide.selected {
   border: none;
 }
 
+.checkbox {
+  margin-left: 60px;
+}
+.checkbox input {
+  height: 20px;
+  width: 30px;
+}
+
 @media only screen and (max-width: 390px) {
   .booking-container {
     flex-direction: row;
@@ -1509,6 +1651,9 @@ li.slide.selected {
 }
 .pay-metod img {
   padding: 5px;
+}
+.pay-metod input {
+  padding: auto;
 }
 
 .input-form {
@@ -1622,6 +1767,45 @@ li.slide.selected {
     height: 30px;
   }
 }
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  padding: 30px;
+}
+.container-login h1 {
+  margin-bottom: 20px;
+}
+.container-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+.container-login form label {
+  margin-bottom: 5px;
+  font-family: Lora;
+}
+.container-login form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 2px solid gray;
+}
+.container-login form button {
+  background: #D8C690;
+  color: #000;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  width: 120px;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;

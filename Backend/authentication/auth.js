@@ -4,10 +4,10 @@ require('dotenv').config()
 const secretKey = process.env.SECRET_KEY;
 
 exports.generateToken = (user) => {
-    return jwt.sign({_id: user._id, displayName: user.displayName}, secretKey, {expiresIn: '1d'})
+    return jwt.sign({_id: user._id, fullName: user.fullName}, secretKey, {expiresIn: '1y'})
 }
 
-exports.verfyToken = (req, res, next) => {
+exports.verifyToken = (req, res, next) => {
     
     try {
         const token = req.headers.authorization.split(' ')[1];
@@ -21,20 +21,5 @@ exports.verfyToken = (req, res, next) => {
     }
 }
 
-
-// för att logga in som admin  email: mia@.com - password: mia
-const admin = ['64e8a5cbd35fd30b8e871938']
-
-exports.checkAdmin = (req, res, next) => {
-    if(admin.includes(req.userId)){
-        next()
-    }
-    else{
-        res.status(401).json({
-            message: 'you nedd to be admin to se the  users orders'
-        })
-    }
-    
-}
 
 

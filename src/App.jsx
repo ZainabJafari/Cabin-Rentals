@@ -9,13 +9,14 @@ import {DateProvider} from './Context/dateContext'
 import Details from './Pages/Details'
 import BookingConfirm from './Pages/BookingConfirm'
 import PaymentConfirmation from './Pages/PaymentConfirmation'
+import Login from './Components/Login'
 
 
 const App = () => {
   return (
     <>
-    <CabinsContextProvider>
     <DateProvider>
+    <CabinsContextProvider>
      <Router>
       <Routes>
         <Route path='/' element={<Home />}/>
@@ -23,11 +24,12 @@ const App = () => {
         <Route path='/details/:id' element={<Details />}/>
         <Route path='/bookingInformation' element={<BookingConfirm />}/>
         <Route path='/paymentConfirmation' element={<PaymentConfirmation />}/>
+        <Route path='/login' element={<Login />}/>
       </Routes>
      </Router>
-     </DateProvider>
      </CabinsContextProvider>
-     {/* <Footer /> */}
+     </DateProvider>
+     <Footer />
     </>
   )
 }

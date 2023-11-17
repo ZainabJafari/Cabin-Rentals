@@ -35,7 +35,7 @@ const Footer = () => {
 
 
 
-      <div className='card-one'>
+      <div className='card-one-footer'>
         <p className='followText'>Sign up to our newletter</p>
         <div className='rectangel'> <p className='email'>email</p> <p className='space'>| </p> <p className='Subscribe'>Subscribe</p></div>
         <img className='logo' src={logo} alt="" />

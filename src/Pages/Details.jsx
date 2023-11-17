@@ -8,14 +8,8 @@ import Reviews from '../Components/DetailComponents/Reviews'
 const Details = () => {
   return (
     <div>
-    <CabinsContextProvider>
-      <DateProvider>
-
         <ImageDetailCabin />
         {/* <Reviews /> */}
-        </DateProvider>
-
-        </CabinsContextProvider>
     </div>
   )
 }

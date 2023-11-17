@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import {CabinsContext} from '../../../Context/cabinContext'
 
-const HomeNavDropdown = () => {
+const HomeNavDropdown = ({ onSelectCategory }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  // const handleCategorySelect = () => {
+
+  //   setIsOpen(false);
+  // };
 
   return (
     <div className="dropdown">
@@ -25,13 +30,13 @@ const HomeNavDropdown = () => {
         </svg>
       </div>
       {isOpen && (
-        <div className="dropdown-options">
-          <div className="option">All</div>
-          <div className="option">Budget</div>
-          <div className="option">Standard</div>
-          <div className="option">Deluxe</div>
-        </div>
-      )}
+      <div className="dropdown-options">
+        <div className="option" onClick={() => onSelectCategory('All')}>All</div>
+        <div className="option" onClick={() => onSelectCategory('Budget')}>Budget</div>
+        <div className="option" onClick={() => onSelectCategory('Standard')}>Standard</div>
+        <div className="option" onClick={() => onSelectCategory('Deluxe')}>Deluxe</div>
+      </div>
+    )}
     </div>
   );
 };

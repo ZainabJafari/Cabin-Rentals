@@ -155,9 +155,14 @@ const UserRegister = () => {
     <div className='pay-metod'>
       <p>Payment Method:</p>
       <img src={img1} alt="Master card" />
+      <input type="checkbox"/>
       <img src={img2} alt="Klarna" />
+      <input type="checkbox" />
       <img src={img3} alt="paypal" />
+      <input type="checkbox" />
       <img src={img4} alt="express" />
+      <input type="checkbox" />
+
     </div>
     </div>
   );

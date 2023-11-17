@@ -33,10 +33,15 @@ exports.getAllCabin = async (req, res) => {
 }
 
 exports.getCabinById = async (req, res) =>{
-    const cabin = await Cabin.findById(req.params.id)
-
-    if(!cabin){
-        return res.status(404).json({message: 'Could not find the cabin'})
+    try {
+        const cabin = await Cabin.findById(req.params.id)
+        
+        if(!cabin){
+            return res.status(404).json({message: 'Could not find the cabin'})
+        }
+        res.status(200).json(cabin)
     }
-    res.status(200).json(cabin)
+    catch(error){
+        console.log("ERROR GETTING cabin",error)
+    }
 }

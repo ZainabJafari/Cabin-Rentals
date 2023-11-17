@@ -12,14 +12,14 @@ exports.createNewUser = async (req, res) => {
     }
     
     const salt = bcrypt.genSaltSync(10);
-
     bcrypt.hash(password, salt, (err, hash) => {
         if(err){
             return res.status(500).json({
                 message: 'filed when encrpterin the password'
             })
         }
-        User.create({fullName, email,  passwordHash: hash, phoneNummer, streetAdress, city, state })
+
+        User.create({fullName, email, passwordHash: hash, phoneNummer, streetAdress, city, state })
 
         .then(user =>{
             res.status(201).json({
@@ -30,30 +30,38 @@ exports.createNewUser = async (req, res) => {
 }
 
 exports.loginUser = (req, res) => {
-    const {email, password} = req.body
+    const { email, password } = req.body
 
-    if(!email || !password){
-        return res.status(400).json({message: 'You need to enter both email and password'})
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Du måste ange både e-post och lösenord' })
     }
-    
-    User.findOne({email})
-    .then(data =>{
-        if(!data){
-            return res.status(401).json({message: 'incorrect credentials'})
-        }
 
-        bcrypt.compare(password, data.passwordHash, (err, result) => {
-            if(err){
-                return res.status(500).json({message: 'something went wrong when decrypting the psaaword'})
+    User.findOne({ email })
+        .then(data => {
+            if (!data) {
+                return res.status(401).json({ message: 'Felaktiga inloggningsuppgifter' })
             }
+            console.log("DATA", data)
+            bcrypt.compare(password, data.passwordHash, (err, result) => {
+                if (err) {
+                    console.log("ERROR", err)
+                    return res.status(500).json({ message: 'Något gick fel vid dekryptering av lösenordet' })
+                }
 
-            if(!result){
-                return res.status(401).json({message: 'Incorrect credentials'})
-            }
+                if (!result) {
+                    return res.status(401).json({ message: 'Felaktiga inloggningsuppgifter' })
+                }
 
-            res.status(200).json({token: auth.generateToken(data)})
+                res.status(200).json({
+                    token: auth.generateToken(data),
+                });
+            })
         })
-
-
-    })
+        .catch(error => {
+            console.error('Fel vid inloggning:', error);
+            res.status(500).json({ message: 'Något gick fel vid inloggningen' });
+        });
 }
+
+
+//TODO: get user data trough user id

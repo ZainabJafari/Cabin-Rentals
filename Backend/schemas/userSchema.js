@@ -10,6 +10,7 @@ const userSchema = mongoose.Schema({
     state: {type: String, required: true} ,
 })
 
+
 const User = mongoose.model('User', userSchema)
 
 module.exports = User;

@@ -10,7 +10,7 @@ import Kitchen from '../Icons/Kitchen';
 import Pet from '../Icons/Pet';
 import TV from '../Icons/TV';
 import Towels from '../Icons/Towels';
-import { DateContext } from '../../Context/dateContext';
+import { DateContext, useDateContext } from '../../Context/dateContext';
 import { CabinsContext } from '../../Context/cabinContext';
 import { Link } from 'react-router-dom';
 import Reviews from '../../Components/DetailComponents/Reviews'
@@ -18,11 +18,11 @@ import Reviews from '../../Components/DetailComponents/Reviews'
 import { useContext } from 'react';
 
 const IconsDetail = () => {
-    const { startDate, endDate } = useContext(DateContext);
-    const { getCabinDetail } = useContext(CabinsContext);
+    const { startDate, endDate, getFormattedDate } = useDateContext()
+    const { cabinDetail } = useContext(CabinsContext);
 
     // Lägg till null-kontroll för getCabinDetail för att undvika fel
-    if (!getCabinDetail) {
+    if (!cabinDetail) {
         return <div>Loading...</div>; // Anpassa meddelande för laddning eller annat vid behov
     }
 
@@ -33,7 +33,7 @@ const IconsDetail = () => {
                 <div className='part-one'>
                     <div className='icon-list'>
                         <div className='row-one'>
-                            <div key={getCabinDetail._id} className='common-icon'>
+                            <div key={cabinDetail._id} className='common-icon'>
                                 <div><Charging /></div>
                                 <p>Charging station for electric vehicles</p>
                             </div>
@@ -63,7 +63,7 @@ const IconsDetail = () => {
                     </div>
              
 
-                 {getCabinDetail.property.map((description, index) => (
+                 {cabinDetail.property.map((description, index) => (
                     <div className='row-one-list' key={index}>
                         <div className='description-container' key={description.Washingmachine}>
                             {description.Washingmachine && (
@@ -133,19 +133,19 @@ const IconsDetail = () => {
                    <div className='reserv-text'>
                     <div>
                         <p>1 bedroom </p>
-                        <p>check in {startDate}</p>
+                        <p>check in {getFormattedDate(startDate)}</p>
                     </div>
                     <div>
                         <p>2x
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'>
                                 <path d='M7.68099 8.35365C9.80286 8.35365 11.5215 6.59596 11.5215 4.42585C11.5215 2.25574 9.80286 0.498047 7.68099 0.498047C5.55912 0.498047 3.84049 2.25574 3.84049 4.42585C3.84049 6.59596 5.55912 8.35365 7.68099 8.35365ZM7.68099 10.3176C5.11746 10.3176 0 11.6334 0 14.2454V16.2093H15.362V14.2454C15.362 11.6334 10.2445 10.3176 7.68099 10.3176Z' fill='#111111' />
                             </svg></p>
-                        <p>check out {endDate}</p>
+                        <p>check out {getFormattedDate(endDate)}</p>
                     </div>
                     </div>
                 <div className='reserv-price'>
                     <p>Total</p>
-                    <p>{getCabinDetail.price}</p>
+                    <p>{cabinDetail.price}</p>
                 </div>
                 <div>
                     <Link to={'/bookingInformation'}><button>Reserve</button></Link>
@@ -156,7 +156,7 @@ const IconsDetail = () => {
               <div>  
                 <div className='icluded-container'>
                 <p className='included-text'>Included in the package</p>
-                    {getCabinDetail.included.map((includ, index) => (
+                    {cabinDetail.included.map((includ, index) => (
                         <li key={index} className='included'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                                 <circle cx="5.5" cy="5.5" r="5.5" fill="#396A3C" />

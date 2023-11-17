@@ -1,8 +1,24 @@
-import React from 'react'
+import {useContext, useEffect, useState} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer/Footer'
+import { CabinsContext } from '../Context/cabinContext'
+import axios from 'axios'
+
 
 const PaymentConfirmation = () => {
+
+    const [userOrder, setUserOrder] = useState()
+    
+        const getAllCabins = async () => {
+      const result = await axios.get('http://localhost:7777/api/order/myOrder')
+      setUserOrder(result.data)
+      console.log(userOrder);
+      
+  }
+  useEffect(() => {
+    getAllCabins();
+  }, []);
+
     return (
         <div>
             <Navbar/>
@@ -14,6 +30,8 @@ const PaymentConfirmation = () => {
                 <h3 className='general-text'>Thank you for your payment! </h3>
                 <p>Total payment amount: </p>
                 <p className='general-text'>price</p>
+                {/* <p>{userOrder.price}</p> */}
+
                 <p>Your booking reference:</p>
                 <p className='general-text'>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
                 <p>A Receipt for this transaction has been sent to this email:</p>

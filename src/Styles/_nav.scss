@@ -52,6 +52,14 @@
     flex-direction: row;
     margin-right: 30px;
     list-style: none;
+    li{
+        font-size:30px;
+        font-weight: bold;
+        background-color: #090909;
+        margin-right: 15px;
+        text-decoration: none;
+        padding: 4px;
+    }
 }
 
 .navlink-link p {
@@ -158,6 +166,9 @@ border: 10px;
     background-color: white;
     // border: 10px;
     // border-radius: ;
+}
+.navbar-link-li{
+    font-size: 25px;
 }
 
 // .dropdown-options {
