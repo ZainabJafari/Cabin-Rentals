@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
+import {useNavigate, Navigate} from 'react-router-dom'
+import UserRegister from './BookingComponents/UserRegister';
+
+import axios from 'axios';
+
+axios.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem('TOKEN');
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 const Login = () => {
   const [email, setEmail] = useState('sara@gmail.com');
   const [password, setPassword] = useState('sara');
+
+  const Navigate = useNavigate()
 
   const handleLogin = async () => {
     try {
@@ -11,7 +30,7 @@ const Login = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Autharization': "Bearer ..."
+          'Authorization': "Bearer ..."
         },
         body: JSON.stringify({ email, password }),
       });
@@ -20,6 +39,8 @@ const Login = () => {
         const data = await response.json();
         console.log('Login successful:', data);
         localStorage.setItem("TOKEN", data.token)
+        axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+        Navigate('/')
         //TODO: route user to homepage
         // setEmail('');
         // setPassword('');
@@ -49,6 +70,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+    <UserRegister/>
     </div>
   );
 };

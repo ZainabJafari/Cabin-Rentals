@@ -10,7 +10,7 @@ import Kitchen from '../Icons/Kitchen';
 import Pet from '../Icons/Pet';
 import TV from '../Icons/TV';
 import Towels from '../Icons/Towels';
-import { DateContext, useDateContext } from '../../Context/dateContext';
+import { useDateContext } from '../../Context/dateContext';
 import { CabinsContext } from '../../Context/cabinContext';
 import { Link } from 'react-router-dom';
 import Reviews from '../../Components/DetailComponents/Reviews'

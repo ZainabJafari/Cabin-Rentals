@@ -19,16 +19,20 @@
     position: absolute;
     bottom: 10px;
     left: 50%;
-    margin: 0px 0px 190px 520px;
+    margin: 0px 0px 230px 510px;
     transform: translateX(-50%);
     border: none;
+    height: 1px;
+    width: 1px;
 }
 
 .before-button {
     position: absolute;
     bottom: 10px;
-    right: 95%;
-    margin: 0px 0px 190px 40px;
+    right: 98%;
+    margin: 0px 0px 232px 40px;
+    height: 1px;
+    width: 1px;
 }
 
 .slide-text {
@@ -45,21 +49,25 @@
 @media (max-width: 390px) {
   
     .next-button {
-        // position: absolute;
-        // bottom: 10px;
-        background-color: aqua;
-        // left: 50%;
-        // margin: 0px 0px 190px 520px;
-        // transform: translateX(-50%);
+        position: absolute;
+        bottom: 1px;
+        background-color: rgb(226, 231, 231);
+        left: 50%;
+        margin: 0px 0px 130px 150px;
+        transform: translateX(-50%);
         border: none;
+        width: 1px;
+        height: 1px;
+        
     }
 
     .before-button {
         position: absolute;
-        // bottom: 10px;
-        // background-color: aqua;
-        // right: 95%;
-        // margin: 0px 0px 190px 40px;
+        bottom: 10px;
+        right: 97%;
+        margin: 0px 0px 120px 0px;
+        width: 1px;
+        height: 1px;
     }
 
     .slide-text {
@@ -70,7 +78,14 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        // margin: 119px 550px 64px 530px;
+        margin: 40px 0px 50px 10px;
     }
+    .slide img {
+        display: block;
+        margin: 0 auto;
+        width: 390px;
+        height: 220px;
+    }
+    
 
 }

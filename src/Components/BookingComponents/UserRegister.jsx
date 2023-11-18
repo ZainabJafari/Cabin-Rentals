@@ -33,12 +33,15 @@ const UserRegister = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Autharization': "Bearer ..."
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('Form data successfully submitted to the backend!');
+        const data = await response.json()
+        console.log('Register successful:', data);
+        localStorage.setItem("TOKEN", data.token)
         setFormData({
           fullName: '',
           email: '',
@@ -60,6 +63,7 @@ const UserRegister = () => {
 
     <div className='register'>
     <div className='input-form'>
+      <h3>Create Account</h3>
     <form onSubmit={handleSubmit}>
       <div>
       <label htmlFor="fullName">fullName</label>
@@ -146,8 +150,9 @@ const UserRegister = () => {
           placeholder="State/Province"
         />
       </div>
-
-     <Link to={'/paymentConfirmation'}><button className='btn-btn-submit' type="submit">Confirm Booking</button></Link> 
+    {/* <button type='submit'>Send</button> */}
+    
+     <Link to={'/bookingInformation'}><button className='btn-btn-submit' type="submit">Submit</button></Link> 
     </form>
             
     </div>

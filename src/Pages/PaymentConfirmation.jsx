@@ -7,17 +7,9 @@ import axios from 'axios'
 
 const PaymentConfirmation = () => {
 
-    const [userOrder, setUserOrder] = useState()
-    
-        const getAllCabins = async () => {
-      const result = await axios.get('http://localhost:7777/api/order/myOrder')
-      setUserOrder(result.data)
-      console.log(userOrder);
-      
-  }
-  useEffect(() => {
-    getAllCabins();
-  }, []);
+
+
+
 
     return (
         <div>

@@ -20,40 +20,40 @@ const HomeReview = () => {
             <img className='re-img' src={customer1} alt="customer-image" />
 
                 <p className='review-name'>Jane</p>
-                <div className='star'>
+                <div className='star-style'>
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 </div>
-                <p className='text'>Det var som att kliva in i en oas av lugn och natur. Utsikten var bedårande, och stugans mysiga atmosfär fick mig omedelbart att slappna av.</p>
+                <p className='text-review'>Det var som att kliva in i en oas av lugn och natur. Utsikten var bedårande, och stugans mysiga atmosfär fick mig omedelbart att slappna av.</p>
             </div>
             <div className='review-estimonial'>
             <img className='re-img' src={customer3} alt="customer-image" />
 
                 <p className='review-name'>John</p>
-                <div className='star'>
+                <div className='star-style'>
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 </div>
-                <p className='text'> jag älskade att laga middagar i det fullt utrustade köket. Att utforska området och vandra genom de vackra skogarna gjorde verkligen upplevelsen oförglömlig.</p>
+                <p className='text-review'> jag älskade att laga middagar i det fullt utrustade köket. Att utforska området och vandra genom de vackra skogarna gjorde verkligen upplevelsen oförglömlig.</p>
             </div>
             <div className='review-estimonial'>
             <img className='re-img' src={customer2} alt="customer-image" />
 
                 <p className='review-name'>Doe</p>
-                <div className='star'>
+                <div className='star-style'>
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 <Stars />
                 </div>
-                <p className='text'>Det var den perfekta pausen från vardagens stress och jag ser fram emot att hyra stuga igen i framtiden.</p>
+                <p className='text-review'>Det var den perfekta pausen från vardagens stress och jag ser fram emot att hyra stuga igen i framtiden.</p>
             </div>
 
 

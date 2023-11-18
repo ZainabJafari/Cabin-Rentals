@@ -9,9 +9,5 @@ const orderSchema = new Schema({
     cancellationProtection: {type: Boolean, default: false}
 })
 
-const userOrderShema = new Schema({
-    user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
-    orders: {type: [orderSchema], required: true}
-})
 
 module.exports = mongoose.model('Order', orderSchema)

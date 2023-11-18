@@ -36,6 +36,7 @@ export const CabinsContextProvider = (props) => {
           console.error(error);
       }
   }
+  
 
    
 
