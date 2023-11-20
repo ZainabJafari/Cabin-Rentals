@@ -136,7 +136,7 @@ const IconsDetail = () => {
                         <p>check in {getFormattedDate(startDate)}</p>
                     </div>
                     <div>
-                        <p>2x
+                        <p className='persons'>2x
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'>
                                 <path d='M7.68099 8.35365C9.80286 8.35365 11.5215 6.59596 11.5215 4.42585C11.5215 2.25574 9.80286 0.498047 7.68099 0.498047C5.55912 0.498047 3.84049 2.25574 3.84049 4.42585C3.84049 6.59596 5.55912 8.35365 7.68099 8.35365ZM7.68099 10.3176C5.11746 10.3176 0 11.6334 0 14.2454V16.2093H15.362V14.2454C15.362 11.6334 10.2445 10.3176 7.68099 10.3176Z' fill='#111111' />
                             </svg></p>
@@ -144,11 +144,11 @@ const IconsDetail = () => {
                     </div>
                     </div>
                 <div className='reserv-price'>
-                    <p>Total</p>
+                    <p className='total-price'>Total</p>
                     <p>{cabinDetail.price}</p>
                 </div>
                 <div>
-                    <Link to={'/bookingInformation'}><button>Reserve</button></Link>
+                    <Link  to={'/bookingInformation'} className='btn-btn'><button>Reserve</button></Link>
             </div>
             </div>
             </div>

@@ -10,23 +10,42 @@
     height: 155px;
     flex-shrink: 0;
 }
-.carousel-images{
+
+.carousel-images {
     width: 8px;
     background-color: aqua;
 }
-li.slide.selected{
+
+li.slide.selected {
     width: 0px;
     background-color: rgb(107, 48, 48);
     height: 0px;
 
 }
-.carousel-image{
+
+.carousel-image {
     width: 100%;
     height: 100%;
     margin-left: 500px;
 
 }
-.slider-wrapper axis-horizontal
+
+// .slider-wrapper axis-horizontal
+
+.detail-images-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.detail-image-style {
+    width: 223px;
+    height: 155px;
+
+}
 
 /* i din CSS-fil */
 // .image-carousel-container {
@@ -44,15 +63,16 @@ li.slide.selected{
 
 /* i din CSS-fil */
 .image-carousel-container {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
     // overflow: hidden;
     max-width: 300px;
     /* Anpassa bredden efter dina behov */
     margin: 0 auto;
+    display: none;
 }
 
 .carousel-wrapper {
@@ -91,11 +111,65 @@ li.slide.selected{
     .image-carousel-container img {
         max-width: 100%;
         height: auto;
+
+        .control-text{
+            background-color: #f81414;
+        }
     }
 
     .detail-img {
         width: 100%;
         height: 340px;
-        
+        display: none;
+
+    }
+
+    .detail-images-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        margin-left: 200px;
+        margin-right: 200px;
+        display: none;
+
+    }
+
+    .detail-image-style {
+        width: 223px;
+        height: 155px;
+
+    }
+
+    .carousel-image {
+        width: 140px;
+        height: 140px;
+
+    }
+
+    .carousel-images {
+        width: 390px;
+        height: 240px;
+        margin-left: 10px;
+
+    }
+
+    .carousel-wrapper {
+        width: 390px;
+        height: 200px;
+    }
+
+    .carousel.carousel-slider {
+        .control-arrow {
+            top: 0;
+            color: #f81414;
+            font-size: 26px;
+            bottom: 0;
+            margin-top: 30;
+            padding: 5px;
+        }
+
+        .control-text {
+            background-color: #f81414;
+        }
     }
 }

@@ -165,14 +165,28 @@
 }
 
 @media only screen and (max-width: 390px) {
+    .booking-information{
+        margin-right: 20px;
+    }
     .booking-container {
         flex-direction: row; 
         padding: 0px;
     }
-    .baner{
+    .baner {
+        width: 100%; 
         height: 35px;
-        p{
-            padding: 9px;
+        background-color: #486349;
+        border-radius: 5px 5px 5px 5px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 10px;
+    
+        p {
+            padding: 50px 0px 0px 5%;
         }
     }
     .booking-information h3 {

@@ -197,6 +197,7 @@ display: none;
     // padding: 10px; /* Lägg till lite luft på mobilen */
   }
 
+
   .navbar-link {
     display: none;
   }
@@ -214,10 +215,9 @@ display: none;
     top: 100px;
     right: 0;
     width: 40%;
-    height: 20vh;
+    height: 40vh;
     background-color: #fff;
     border: 1px solid #575555;
-    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
@@ -230,6 +230,7 @@ display: none;
     pointer-events: auto;
     display: block;
     border: 1px solid #CBB26A;
+    border-radius: 5px;
   }
 
   .mobile-menu-links a {
@@ -238,6 +239,13 @@ display: none;
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    padding: 5px;
+    padding: 0px;
+    border-bottom: 1px solid rgb(233, 227, 227);
+    width: 100%;
+    
+  }
+  .navbar-logo{
+    width: 140px;
+    height: 85px;
   }
 }
