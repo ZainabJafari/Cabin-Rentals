@@ -29,11 +29,9 @@ export const DateProvider = ({ children }) => {
 
     if (_startDate) {
       setStartDate(new Date(_startDate))
-      // saveDatesToBackend()
     }
     if (_endDate) {
       setEndDate(new Date(_endDate))
-      // saveDatesToBackend()
     }
     setTimeout(() => {
       dateHasLoaded.current = true
@@ -66,7 +64,6 @@ export const DateProvider = ({ children }) => {
         endDate: endDate.toISOString(),
       });
 
-      // Logga ut API-svaret eller utför andra åtgärder om det behövs
       console.log('Svar från backend:', response.data);
     } catch (error) {
       console.error(error.message);
@@ -99,3 +96,4 @@ export const DateProvider = ({ children }) => {
       </DateContext.Provider>
     );
   };
+

@@ -22,12 +22,6 @@ const IconsDetail = () => {
     const { startDate, endDate, getFormattedDate, updateStartDate } = useDateContext()
     const { cabinDetail } = useContext(CabinsContext);
 
-    // useEffect(() => {
-    //     updateStartDate(startDate)
-    //     console.log('startDate has changed:', startDate);
-    //     console.log('endDate has changed:', endDate);
-    // }, [startDate, endDate]);
-
     if (!cabinDetail) {
         return <div>Loading...</div>; 
     }
@@ -155,7 +149,7 @@ const IconsDetail = () => {
                     <p>{cabinDetail.price} SEK</p>
                 </div>
                 <div>
-                    <Link  to={'/bookingInformation'} className='btn-btn'><button>Reserve</button></Link>
+                    <Link  to={'/login'} className='btn-btn'><button>Reserve</button></Link>
             </div>
             </div>
             </div>

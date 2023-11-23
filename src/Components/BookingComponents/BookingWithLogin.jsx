@@ -1,30 +1,34 @@
-import { useEffect, useState } from 'react'
-import { useDateContext } from '../../Context/dateContext'
-import { useCabinContext } from '../../Context/cabinContext';
-import {Link, useNavigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import { useOrderContext } from '../../Context/orderContext';
+import { useState } from 'react';
+import Navbar from '../Navbar';
 
-const BookningInformation = () => {
+const BookingWithLogin = () => {
 
-  const { startDate, endDate, getFormattedDate } = useDateContext()
-  const { cabinDetail } = useCabinContext()
-
+  const { order } = useOrderContext()
   const [isChecked, setIsChecked] = useState(false);
-  
 
 
+  console.log(order);
+
+    if (!order) {
+    return <div>Loading...</div>;
+  }
+
   
-  if(!cabinDetail) return null
   return (
+    
     <div className='booking-information'>
+        <Navbar/>
       <h3>Confirm Booking Information</h3>
       <div className='info'>
         <div className='baner'><p>Booking Information</p></div>
         <div className='booking-container'>
           <div className='booking-info'>
             <p className='general-text'>Check-in Date</p>
-            <p>{getFormattedDate(startDate)}</p>
+            <p>{order.checkinDate.split('T')[0]}</p>
             <p className='general-text'>Chosen Cabin</p>
-            <p>{cabinDetail.cabinName}</p>
+            <p>{order.cabin.cabinName}</p>
             <p>Åre</p>
             <p className='general-text'>Cabin Package</p>
             <p>Exclusive breakfast, premium towels and sheets, champagne, bathtub, sauna, luxary beauty products.</p>
@@ -32,12 +36,13 @@ const BookningInformation = () => {
             <p>500 SEK</p><span className='checkbox'>
               <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
             </span>
+
             <p className='general-text'>Total Cost</p>
-            <p>{isChecked ? cabinDetail.price + 500 : cabinDetail.price}</p>
+            <p>{isChecked ? order.cabin.price + 500 : order.cabin.price}</p>
           </div>
           <div className='booking-info'>
             <p className='general-text'>Check-out Date</p>
-            <p>{getFormattedDate(endDate)}</p>
+            <p>{order.checkoutDate.split('T')[0]}</p>
             <p className='general-text'>Guests</p>
             <p>2 pers</p>
           </div>
@@ -51,4 +56,4 @@ const BookningInformation = () => {
   )
 }
 
-export default BookningInformation
+export default BookingWithLogin

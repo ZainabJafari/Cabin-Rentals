@@ -1,9 +1,7 @@
-import {useContext, useEffect, useState} from 'react'
 import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer/Footer'
-import { CabinsContext } from '../Context/cabinContext'
 import { v4 as uuidv4 } from 'uuid';
 import {useCabinContext} from '../Context/cabinContext'
+import {useOrderContext} from '../Context/orderContext'
 
 
 const PaymentConfirmation = () => {
@@ -12,6 +10,10 @@ const PaymentConfirmation = () => {
 
     const { cabinDetail } = useCabinContext()
 
+    const { order } = useOrderContext()
+
+
+    if(!cabinDetail) return null
     return (
         <div>
             <Navbar/>
@@ -23,8 +25,6 @@ const PaymentConfirmation = () => {
                 <h3 className='general-text'>Thank you for your payment! </h3>
                 <p>Total payment amount: </p>
                 <p className='general-text'>{cabinDetail.price} SEK</p>
-                {/* <p>{userOrder.price}</p> */}
-
                 <p>Your booking reference:</p>
                 <p className='general-text'>{randomId}</p>
                 <p>A Receipt for this transaction has been sent to this email:</p>

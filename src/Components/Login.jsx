@@ -1,22 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import Navbar from './Navbar';
-import {useNavigate, Navigate} from 'react-router-dom'
+import {useNavigate, Navigate , Link} from 'react-router-dom'
 import UserRegister from './BookingComponents/UserRegister';
-
-import axios from 'axios';
-
-// axios.interceptors.request.use(
-//   (config) => {
-//     const token = localStorage.getItem('TOKEN');
-//     if (token) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   },
-//   (error) => {
-//     return Promise.reject(error);
-//   }
-// );
+import {useOrderContext} from '../Context/orderContext'
 
 const Login = () => {
   const [email, setEmail] = useState('sara@gmail.com');
@@ -31,7 +17,6 @@ const Login = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': "Bearer ..."
         },
         body: JSON.stringify({ email, password }),
       });
@@ -40,10 +25,8 @@ const Login = () => {
         const data = await response.json();
         console.log('Login successful:', data);
         localStorage.setItem("TOKEN", data.token)
-        // axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
-        Navigate('/')
-        // setEmail('');
-        // setPassword('');
+        setEmail('');
+        setPassword('');
       } else {
         const errorData = await response.json();
         console.error('Login failed:', errorData.message);
@@ -52,6 +35,22 @@ const Login = () => {
       console.error('Error during login:', error);
     }
   };
+
+  
+  const { createOrder  } = useOrderContext()
+  const [isChecked, setIsChecked] = useState(false);
+
+
+  const _createOrder = async () => {
+    const response = await createOrder(isChecked)
+
+    if(response) {
+      //TODO: navigate user
+      console.log('order is ' , response);
+      // Navigate()
+    }
+    //TODO: error handling
+  }
 
 
   return (
@@ -66,10 +65,18 @@ const Login = () => {
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-        <button type="button" onClick={handleLogin}>
+       <button type="button" onClick={(handleLogin)}>
           Login
         </button>
       </form>
+    </div>
+    <div className='link-login'>
+       <Link to={'/BookinInfo'}>
+       <button className='btn-btn-login' onClick={_createOrder}>My order</button>
+        </Link> 
+       <Link to={'/'}>
+       <button className='btn-btn-login'>Home</button>
+        </Link> 
     </div>
     <UserRegister/>
     </div>

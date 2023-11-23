@@ -1,6 +1,5 @@
 import {createContext, useContext, useState, useEffect} from 'react'
 import axios from 'axios'
-import {useParams} from 'react-router-dom'
 import 'react-datepicker/dist/react-datepicker.css';
 
 const defaultState = {

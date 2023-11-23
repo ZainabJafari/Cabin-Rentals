@@ -17,7 +17,6 @@ const Nav = () => {
     try {
       if (selectedStartDate) {
         updateStartDate(selectedStartDate)
-        // saveDatesToBackend()
       }
     } catch (error) {
       console.error('Error parsing Start Date:', error);
@@ -30,7 +29,6 @@ const Nav = () => {
       if (selectedEndDate) {
         const parsedEndDate = parseISO(selectedEndDate);
         updateEndDate(selectedEndDate);
-        // saveDatesToBackend()
       }
     } catch (error) {
       console.error('Error parsing End Date:', error);
