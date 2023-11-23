@@ -36,14 +36,15 @@ li.slide.selected {
     display: flex;
     flex-direction: row;
     width: 300px;
-    margin-left: 200px;
+    margin-left: 210px;
     margin-right: 200px;
-
+    padding: 0px;
 }
 
 .detail-image-style {
     width: 223px;
     height: 155px;
+    margin: 10px;
 
 }
 

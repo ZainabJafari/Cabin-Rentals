@@ -8,7 +8,7 @@ const defaultState = {
   updateStartDate: (startDate) => { },
   updateEndDate: (endDate) => { },
   getFormattedDate: (date) => { },
-  // saveDatesToBackend: () => {},
+  saveDatesToBackend: () => {},
 }
 
 export const DateContext = createContext(defaultState);
@@ -28,11 +28,12 @@ export const DateProvider = ({ children }) => {
     const _endDate = localStorage.getItem('endDate')
 
     if (_startDate) {
-      console.log("GETTING START DATE", _startDate, new Date(_startDate))
       setStartDate(new Date(_startDate))
+      // saveDatesToBackend()
     }
     if (_endDate) {
       setEndDate(new Date(_endDate))
+      // saveDatesToBackend()
     }
     setTimeout(() => {
       dateHasLoaded.current = true
@@ -58,20 +59,19 @@ export const DateProvider = ({ children }) => {
       localStorage.setItem(name, value)
     }
   }
-  // const saveDatesToBackend = async () => {
-  //   try {
-  //     // Gör ett HTTP POST-anrop till backend för att spara datumen
-  //     const response = await axios.post('http://localhost:7777/api/order', {
-  //       startDate: startDate.toISOString(),
-  //       endDate: endDate.toISOString(),
-  //     });
+  const saveDatesToBackend = async () => {
+    try {
+      const response = await axios.post('http://localhost:7777/api/order', {
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+      });
 
-  //     // Logga ut API-svaret eller utför andra åtgärder om det behövs
-  //     console.log('Svar från backend:', response.data);
-  //   } catch (error) {
-  //     console.error('Fel vid spara datumen till backend:', error.message);
-  //   }
-  // };
+      // Logga ut API-svaret eller utför andra åtgärder om det behövs
+      console.log('Svar från backend:', response.data);
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
 
   useEffect(() => {
     setLocalStorageOf("startDate", startDate?.toISOString())
@@ -92,7 +92,7 @@ export const DateProvider = ({ children }) => {
           updateStartDate,
           updateEndDate,
           getFormattedDate,
-          // saveDatesToBackend,
+          saveDatesToBackend,
         }}
       >
         {children}

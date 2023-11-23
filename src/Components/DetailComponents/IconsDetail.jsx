@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect} from 'react';
 import Wifi from '../Icons/Wifi';
 import Deck from '../Icons/Deck';
 import Washingmachine from '../Icons/WashingMachin';
@@ -15,16 +15,23 @@ import { CabinsContext } from '../../Context/cabinContext';
 import { Link } from 'react-router-dom';
 import Reviews from '../../Components/DetailComponents/Reviews'
 
+
 import { useContext } from 'react';
 
 const IconsDetail = () => {
-    const { startDate, endDate, getFormattedDate } = useDateContext()
+    const { startDate, endDate, getFormattedDate, updateStartDate } = useDateContext()
     const { cabinDetail } = useContext(CabinsContext);
 
-    // Lägg till null-kontroll för getCabinDetail för att undvika fel
+    // useEffect(() => {
+    //     updateStartDate(startDate)
+    //     console.log('startDate has changed:', startDate);
+    //     console.log('endDate has changed:', endDate);
+    // }, [startDate, endDate]);
+
     if (!cabinDetail) {
-        return <div>Loading...</div>; // Anpassa meddelande för laddning eller annat vid behov
+        return <div>Loading...</div>; 
     }
+
 
     return (
         <div className='allt'>
@@ -145,7 +152,7 @@ const IconsDetail = () => {
                     </div>
                 <div className='reserv-price'>
                     <p className='total-price'>Total</p>
-                    <p>{cabinDetail.price}</p>
+                    <p>{cabinDetail.price} SEK</p>
                 </div>
                 <div>
                     <Link  to={'/bookingInformation'} className='btn-btn'><button>Reserve</button></Link>

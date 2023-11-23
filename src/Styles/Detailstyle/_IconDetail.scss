@@ -344,10 +344,18 @@
             margin-top: 15px;
             width: 10px;
         }
+        svg{
+            // background-color: #000;
+            width: 30px;
+        }
     }
 
     .description-text {
         padding: 2px;
+
+   svg{
+      width: 30px;
+   }
     }
 
     .included-text {

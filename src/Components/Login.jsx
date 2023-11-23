@@ -5,22 +5,23 @@ import UserRegister from './BookingComponents/UserRegister';
 
 import axios from 'axios';
 
-axios.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('TOKEN');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
+// axios.interceptors.request.use(
+//   (config) => {
+//     const token = localStorage.getItem('TOKEN');
+//     if (token) {
+//       config.headers.Authorization = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   (error) => {
+//     return Promise.reject(error);
+//   }
+// );
 
 const Login = () => {
   const [email, setEmail] = useState('sara@gmail.com');
   const [password, setPassword] = useState('sara');
+
 
   const Navigate = useNavigate()
 
@@ -39,9 +40,8 @@ const Login = () => {
         const data = await response.json();
         console.log('Login successful:', data);
         localStorage.setItem("TOKEN", data.token)
-        axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
+        // axios.defaults.headers.common['Authorization'] = `Bearer ${data.token}`;
         Navigate('/')
-        //TODO: route user to homepage
         // setEmail('');
         // setPassword('');
       } else {
@@ -52,6 +52,7 @@ const Login = () => {
       console.error('Error during login:', error);
     }
   };
+
 
   return (
     <div>

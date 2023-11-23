@@ -63,7 +63,7 @@ const UserRegister = () => {
 
     <div className='register'>
     <div className='input-form'>
-      <h3>Create Account</h3>
+      <h3 className='register'>Create Account</h3>
     <form onSubmit={handleSubmit}>
       <div>
       <label htmlFor="fullName">fullName</label>
@@ -149,10 +149,8 @@ const UserRegister = () => {
           required
           placeholder="State/Province"
         />
-      </div>
-    {/* <button type='submit'>Send</button> */}
-    
-     <Link to={'/bookingInformation'}><button className='btn-btn-submit' type="submit">Submit</button></Link> 
+      </div>    
+     <Link to={'/bookingInformation'} className='btn-btn'><button className='btn-btn-submit' type="submit">Submit</button></Link> 
     </form>
             
     </div>

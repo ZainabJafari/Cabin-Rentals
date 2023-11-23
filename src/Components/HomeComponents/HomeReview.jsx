@@ -8,12 +8,6 @@ const HomeReview = () => {
   return (
     <div>
         <h2 className='review-text'>Discover Memorable Retreat Experiences</h2>
-        {/* <div className='Img'>
-                <img className='re-img' src={customer1} alt="customer-image" />
-                <img className='re-img' src={customer3} alt="customer-image" />
-                <img className='re-img' src={customer2} alt="customer-image" />
-
-        </div> */}
         <div className='review'>
 
             <div className='review-estimonial'>

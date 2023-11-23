@@ -1,13 +1,9 @@
 import React from 'react'
 import logo from '../Footer/logo.png'
 
-
-
 const Footer = () => {
   return (
-
     <div className='footer-style'>
-
       <div className='contact'>
         <div className='conect-icon'>
           <li><svg className='conetcIcon' xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 30 40" fill="none">
@@ -30,10 +26,6 @@ const Footer = () => {
           <p>contact@northernnest.com</p>
         </div>
       </div>
-
-
-
-
 
       <div className='card-one-footer'>
         <p className='followText'>Sign up to our newletter</p>

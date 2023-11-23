@@ -2,14 +2,15 @@ import {useContext, useEffect, useState} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer/Footer'
 import { CabinsContext } from '../Context/cabinContext'
-import axios from 'axios'
+import { v4 as uuidv4 } from 'uuid';
+import {useCabinContext} from '../Context/cabinContext'
 
 
 const PaymentConfirmation = () => {
 
+    const randomId = Math.random().toString(36)
 
-
-
+    const { cabinDetail } = useCabinContext()
 
     return (
         <div>
@@ -21,16 +22,15 @@ const PaymentConfirmation = () => {
                 </svg></div>
                 <h3 className='general-text'>Thank you for your payment! </h3>
                 <p>Total payment amount: </p>
-                <p className='general-text'>price</p>
+                <p className='general-text'>{cabinDetail.price} SEK</p>
                 {/* <p>{userOrder.price}</p> */}
 
                 <p>Your booking reference:</p>
-                <p className='general-text'>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <p className='general-text'>{randomId}</p>
                 <p>A Receipt for this transaction has been sent to this email:</p>
-                <p className='general-text'>usermail</p>
+                <p className='general-text'>sara@gmail.com</p>
                 <img src="" alt="" />
             </div>
-        {/* <Footer/> */}
         </div>
     )
 }

@@ -12,13 +12,12 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Här kan du logga fel eller skicka felinformation till en loggtjänst
     console.error('Error caught by ErrorBoundary:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>; // Anpassa med ditt eget felmeddelande
+      return <h1>Something went wrong.</h1>; 
     }
 
     return this.props.children;

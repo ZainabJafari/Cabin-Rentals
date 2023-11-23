@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import {CabinsContext} from '../../../Context/cabinContext'
+import React, { useState, useEffect } from 'react';
+import { useCabinContext } from '../../../Context/cabinContext'
+import {Link} from 'react-router-dom'
 
 const HomeNavDropdown = ({ onSelectCategory }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { getAllCabins, filteredCabins, setSelectedCategory } = useCabinContext()
+
+  useEffect(() => {
+    getAllCabins();
+  }, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  // const handleCategorySelect = () => {
-
-  //   setIsOpen(false);
-  // };
 
   return (
     <div className="dropdown">
       <div className="dropdown-toggle" onClick={toggleDropdown}>
         <svg
-            className='last'
+          className='last'
           xmlns="http://www.w3.org/2000/svg"
           width="19"
           height="14"
@@ -30,13 +32,13 @@ const HomeNavDropdown = ({ onSelectCategory }) => {
         </svg>
       </div>
       {isOpen && (
-      <div className="dropdown-options">
-        <div className="option" onClick={() => onSelectCategory('All')}>All</div>
-        <div className="option" onClick={() => onSelectCategory('Budget')}>Budget</div>
-        <div className="option" onClick={() => onSelectCategory('Standard')}>Standard</div>
-        <div className="option" onClick={() => onSelectCategory('Deluxe')}>Deluxe</div>
-      </div>
-    )}
+        <div className="dropdown-options">
+        <Link to={'/cabinlist'}><button className='dropdown-option-btn' onClick={() => setSelectedCategory('All')}>All</button></Link> 
+        <Link to={'/cabinlist'}> <button  className='dropdown-option-btn' onClick={() => setSelectedCategory('Budget')}>Budget</button> </Link> 
+         <Link to={'/cabinlist'}><button className='dropdown-option-btn' onClick={() => setSelectedCategory('Standard')}>Standard</button></Link> 
+         <Link to={'/cabinlist'}><button className='dropdown-option-btn' onClick={() => setSelectedCategory('Deluxe')}>Deluxe</button></Link>
+        </div>
+      )}
     </div>
   );
 };

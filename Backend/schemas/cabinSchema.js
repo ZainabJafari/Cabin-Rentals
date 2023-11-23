@@ -21,7 +21,7 @@ const imagesSchema = new Schema({
 })
 
 const cabinSchema = new Schema({
-    cabinName: { type: String, required: true },
+    cabinName: { type: String, required: true, default: 'All' },
     price: { type: Number, required: true },
     description: { type: String, required: true },
     category: { type: String, required: true },

@@ -7,7 +7,6 @@ const Details = () => {
     <div>
         <Navbar/>
         <ImageDetailCabin />
-        {/* <Reviews /> */}
     </div>
   )
 }
