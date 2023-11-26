@@ -69,11 +69,6 @@ const Nav = () => {
               />
             </p>
           </div>
-          <div>
-            <svg className='last' xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
-              <path d="M3.5625 0L0 3.5625L9.5 13.0625L19 3.5625L15.4375 0L9.5 5.9375L3.5625 0Z" fill="#A0A0A0" />
-            </svg>
-          </div>
         </div>
 
         <div className='hero-container'>
@@ -90,11 +85,6 @@ const Nav = () => {
               />
 
             </p>
-          </div>
-          <div>
-            <svg className='last' xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none">
-              <path d="M3.5625 0L0 3.5625L9.5 13.0625L19 3.5625L15.4375 0L9.5 5.9375L3.5625 0Z" fill="#A0A0A0" />
-            </svg>
           </div>
         </div>
         <div className=''>

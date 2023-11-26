@@ -149,11 +149,6 @@
     background: #FCFCFC;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .mobil {
   display: none;
 }
@@ -361,7 +356,7 @@
     grid-template-columns: repeat(2, 200px);
     gap: 0px;
     align-items: center;
-    width: 390px;
+    width: 380px;
     height: 217px;
     flex-shrink: 0;
     border-radius: 15px;
@@ -409,7 +404,7 @@
   .home-nav-search {
     display: block;
     margin-top: 20px;
-    margin-left: 35px;
+    margin-left: 40px;
     display: flex;
     width: 285px;
     height: 39px;
@@ -918,8 +913,6 @@
     margin: 5px;
   }
 }
-/* Mobilstilar (max bredd 390px) */
-/* Desktop-stilar */
 .navbar {
   width: 1440px;
   height: 116px;
@@ -1360,8 +1353,6 @@ li.slide.selected {
   margin: 10px;
 }
 
-/* i din CSS-fil */
-/* i din CSS-fil */
 .image-carousel-container {
   display: flex;
   flex-direction: row;
@@ -1369,7 +1360,6 @@ li.slide.selected {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5px;
   max-width: 300px;
-  /* Anpassa bredden efter dina behov */
   margin: 0 auto;
   display: none;
 }
@@ -1399,7 +1389,6 @@ li.slide.selected {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     max-width: 800px;
-    /* Anpassa bredden efter dina behov */
     margin: 0 auto;
   }
   .image-carousel-container img {

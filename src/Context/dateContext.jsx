@@ -23,6 +23,7 @@ export const DateProvider = ({ children }) => {
 
   const dateHasLoaded = useRef(false)
 
+  // save date in local storage
   useEffect(() => {
     const _startDate = localStorage.getItem('startDate')
     const _endDate = localStorage.getItem('endDate')

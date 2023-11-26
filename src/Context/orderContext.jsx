@@ -39,6 +39,7 @@ export const OrderProvider = ({ children }) => {
                 Authorization: `Bearer ${token}`
               }
             });
+            //TODO:
             //SPARA order
             //Navigera användare vidare
             //Hämta om våra orders

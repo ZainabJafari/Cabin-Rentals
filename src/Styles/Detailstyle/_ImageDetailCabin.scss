@@ -47,44 +47,22 @@ li.slide.selected {
     margin: 10px;
 
 }
-
-/* i din CSS-fil */
-// .image-carousel-container {
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     grid-gap: 10px;
-//     max-width: 800px; /* Anpassa bredden efter dina behov */
-//     margin: 0 auto;
-//   }
-
-//   .image-carousel-container img {
-//     max-width: 100%;
-//     height: auto;
-//   }
-
-/* i din CSS-fil */
 .image-carousel-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
-    // overflow: hidden;
     max-width: 300px;
-    /* Anpassa bredden efter dina behov */
     margin: 0 auto;
     display: none;
 }
 
 .carousel-wrapper {
-    // display: flex;
     transition: transform 0.3s ease-in-out;
 }
 
 .carousel-image {
-    // width: 200px;
-    // height: 80ppx;
-    // height: auto;
     width: 25%;
 }
 
@@ -105,7 +83,6 @@ li.slide.selected {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 10px;
         max-width: 800px;
-        /* Anpassa bredden efter dina behov */
         margin: 0 auto;
     }
 

@@ -20,11 +20,13 @@ export const CabinsContextProvider = (props) => {
     const [selectedCategory, setSelectedCategory] = useState('All'); 
     const [filteredCabins, setFilteredCabins] = useState([]);
     
+    // take all cabin from backend
     const getAllCabins = async () => {
         const result = await axios.get('http://localhost:7777/api/cabin')
         setCabins(result.data)
     }
 
+    // take a cabin by id 
     const getCabinById = async (id) => {
       try {
           const result = await axios.get('http://localhost:7777/api/cabin/' + id);
@@ -37,7 +39,7 @@ export const CabinsContextProvider = (props) => {
       }
   }
   
-  
+  // Filter cabins according to their category
   useEffect(() => {
     if (selectedCategory === 'All') {
       setFilteredCabins(cabins);
