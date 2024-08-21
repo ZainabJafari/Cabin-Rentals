@@ -37,7 +37,7 @@ const UserRegister = () => {
         },
         body: JSON.stringify(formData),
       });
-
+      console.log(response)
       if (response.ok) {
         const data = await response.json()
         console.log('Register successful:', data);
@@ -150,7 +150,7 @@ const UserRegister = () => {
           placeholder="State/Province"
         />
       </div>    
-     <Link to={'/bookingInformation'} className='btn-btn'><button className='btn-btn-submit' type="submit">Submit</button></Link> 
+    <button className='btn-btn-submit' type="submit">Submit</button>
     </form>
             
     </div>

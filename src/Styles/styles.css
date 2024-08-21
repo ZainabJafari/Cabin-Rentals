@@ -28,6 +28,10 @@
   margin-top: 20px;
 }
 
+.home-container{
+  display: flex;
+  width: 100%;
+}
 .packages-h1 {
   color: #000;
   text-align: center;
@@ -43,7 +47,7 @@
 .home-card {
   display: flex;
   justify-content: space-around;
-  margin: 79px 166px 128px 169px;
+  width: 100%;
 }
 
 .package-card {

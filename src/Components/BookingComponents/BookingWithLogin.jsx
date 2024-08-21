@@ -9,13 +9,9 @@ const BookingWithLogin = () => {
   const [isChecked, setIsChecked] = useState(false);
 
 
-  console.log(order);
-
     if (!order) {
     return <div>Loading...</div>;
-  }
-
-  
+  }  
   return (
     
     <div className='booking-information'>

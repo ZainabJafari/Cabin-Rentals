@@ -6,9 +6,9 @@ import HomeIconPackages from './HomeIconPackages'
 
 const HomePackages = () => {
   return (
-    <div>
+    <div className='home-container'>
       <h1 className='packages-h1'>Tailored Retreats for Every Budget</h1>
-      <div className='home-card'>
+      <div className=''>
         <div className='package-card'>
             <img className='packageImage' src={homeImg1} alt="Cabin Budget" />
             <p className='text'>BUDGET</p>

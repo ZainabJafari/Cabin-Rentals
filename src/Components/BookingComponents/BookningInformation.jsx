@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useDateContext } from '../../Context/dateContext'
 import { useCabinContext } from '../../Context/cabinContext';
 import {Link, useNavigate} from 'react-router-dom'
@@ -9,10 +9,7 @@ const BookningInformation = () => {
   const { cabinDetail } = useCabinContext()
 
   const [isChecked, setIsChecked] = useState(false);
-  
-
-
-  
+    
   if(!cabinDetail) return null
   return (
     <div className='booking-information'>
