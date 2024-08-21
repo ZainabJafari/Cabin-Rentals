@@ -1,367 +1,142 @@
 .detail-facilities-text {
     color: #000;
-    font-family: Lora;
+    font-family: Lora, serif;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    margin-left: 272px;
-    margin-top: 100px;
+    margin: 2rem auto;
+    text-align: center;
 }
 
-.part-one {
-    float: left;
+.part-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    max-width: 1200px;
 }
+.default-faciliti{
+    display: flex;
+    padding: 20px;
+}
+
 
 .icon-list {
     display: flex;
     flex-direction: row;
-    margin-left: 280px;
-    margin-top: 70px;
-    padding: 15px;
+    padding: 10px;
 }
-
+.row-one{
+    padding: 10px;
+}
 .common-icon {
     display: flex;
-
-    p {
-        padding: 40px;
-    }
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.icon-list-row {
-    display: flex;
-}
-
-.row-one-list {
-    padding: 15px;
-    margin-left: 266px;
-}
-
-.listing {
-    display: flex;
+.common-icon p {
+    margin-top: 1rem;
+    font-family: Lora, serif;
+    font-size: 16px;
 }
 
 .description-text {
-    padding: 5px;
     display: flex;
-
-    div {
-        padding-right: 15px;
-        color: #000;
-        font-family: Lora;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+    align-items: center;
+    margin: 1rem 0;
 }
 
-.description-icon {
-    padding-left: 15px;
-}
-
-.icluded-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
-    padding: 10px;
-    float: left;
-}
-
-.included {
-    padding: 10px;
-    text-align: center;
-    margin-left: 260px;
-    margin-top: 30px;
-    color: #000;
-    font-family: Lora;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    list-style: none;
-
-    svg {
-        padding-right: 10px;
-    }
-}
-
-.included-text {
-    margin: 5px 50px 50px 250px;
-    color: #000;
-    font-family: Lora;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    float: left;
-}
-
-.reserv-text {
-
-    padding: 20px;
-
-    div {
-        display: flex;
-        justify-content: space-around;
-        color: #000;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-
-    svg {
-        margin-left: 15px;
-    }
-}
-
-.reserv-price {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
-    color: #000;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.description-text div {
+    margin-right: 1rem;
 }
 
 .rectangle-reserv {
+    display: flex;
+    justify-content: space-around;
     border: 1px solid;
-    box-shadow: 5px 5px 5px 5px rgb(223, 218, 218);
-    width: 390px;
-    height: 259px;
-    flex-shrink: 0;
-    float: right;
-    margin-right: 100px;
-    border-radius: 20px;
-    border: none;
-    margin-bottom: 300px;
-
-    p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    button {
-        display: flex;
-        width: 321.698px;
-        height: 54.466px;
-        padding: 11px 114.698px 12.466px 106px;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        border-radius: 15px;
-        background: #D8C690;
-        border: none;
-        margin-left: 45px;
-        color: #000;
-        font-family: Lora;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+}
+.reserv{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-@media (max-width: 390px) {
+button {
+    background: #D8C690;
+    color: #000;
+    font-family: Lora, serif;
+    font-size: 18px;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.included-container {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+.included{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0.5rem 0;
+}
+.included-text{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.included-container li svg {
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
     .icon-list {
-        display: flex;
-        flex-direction: row;
-        margin-left: 0px;
-        margin-top: 50px;
-        padding: 0px;
-    }
-
-    .detail-part-two {
-        float: left;
-        margin-left: 10px;
-    }
-
-    .part-one {
-        margin: 0px;
-        padding: 0%;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 
     .detail-facilities-text {
-        color: #000;
-        font-family: Lora;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .reserv-text, .reserv-price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-list {
+        grid-template-columns: 1fr;
+    }
+
+    .reserv-text, .reserv-price {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 0.5rem;
     }
 
     .rectangle-reserv {
-        border: 1px solid;
-        box-shadow: 5px 5px 5px rgb(223, 218, 218);
-        border-radius: 0px;
-        border: none;
-        width: 390px;
-        position: fixed;
-        margin-bottom: 0px;
-        bottom: 0;
-        left: 0;
-        width: 390px;
-        background-color: #E9E9E9;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        height: 115px;
-
-
-        button {
-            display: flex;
-            width: 140px;
-            height: 43px;
-            padding: 11px 11px 12px 10px;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            border-radius: 15px;
-            background: #D8C690;
-            border: none;
-            float: right;
-            margin-top: 0px;
-            margin: 0px 20px 30px 2px;
-            color: #000;
-            font-family: Lora;
-            font-weight: 400;
-            line-height: normal;
-            text-decoration: none;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-decoration: none;
-            list-style: none;
-
-        }
-
-        .reserv-text {
-            border: 1px solid;
-            padding: 5px;
-            width: 128px;
-            height: 82px;
-            flex-shrink: 0;
-            float: left;
-            border-radius: 20px;
-            background: white;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-            margin: 10px 20px 10px 20px;
-            border: none;
-
-            p {
-                font-size: 9px;
-            }
-
-            svg {
-                margin-bottom: 2px;
-                margin-left: 10px;
-                width: 45px;
-            }
-
-            .persons {
-                margin-top: 10px;
-                font-size: 12px;
-            }
-        }
-
-        .reserv-price {
-            float: right;
-            margin-right: 80px;
-            color: #000;
-            font-family: Lora;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-
-        .total-price {
-            display: none;
-        }
-
-        p {
-            display: grid;
-            grid-template-columns: repeat(1, 50px);
-            gap: 0px;
-            padding: 5px;
-        }
+        width: 100%;
+        padding: 1rem;
     }
-
-    .icluded-container {
-        display: flex;
-        flex-direction: column;
-        padding: 1px;
-        margin-right: 10px;
-    }
-
-    .row-one-list {
-        padding: 10px;
-        margin: 0px;
-    }
-
-    li.included {
-        margin: 0;
-    }
-
-    p.included-text {
-        margin: 10px;
-    }
-
-    .included {
-        color: #000;
-        font-family: Lora;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        list-style: none;
-    }
-
-    .common-icon {
-        padding: 0px;
-        margin-left: 25px;
-        margin-right: 20px;
-
-        p {
-            margin-left: 25px;
-            margin-top: 10px;
-            font-size: 14px;
-            padding: 25px;
-        }
-
-        div {
-            margin-top: 15px;
-            width: 10px;
-        }
-        svg{
-            width: 30px;
-        }
-    }
-
-    .description-text {
-        padding: 2px;
-
-   svg{
-      width: 30px;
-   }
-    }
-
-    .included-text {
-        color: #000;
-        font-family: Lora;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
 }

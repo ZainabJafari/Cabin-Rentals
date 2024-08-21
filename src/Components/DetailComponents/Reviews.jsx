@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import Stars from '../Icons/Stars'
 import customer1 from '../../assets/customer1.png'
 import customer2 from '../../assets/customer2.png'
@@ -6,13 +6,8 @@ import customer3 from '../../assets/customer3.png'
 
 const HomeReview = () => {
   return (
-    <div>
         <div>
-            <div>
-              <div className='reviews'>
-              </div>
-                <p className='r-text'>Reviews</p>
-            </div>
+          <p className='r-text'>Reviews</p>
           <div className='user-review'>
             <div className='reviews-container'>
               <div className='re'>
@@ -96,8 +91,7 @@ const HomeReview = () => {
 
         </div>
         
-    </div>
   )
 }
 
-export default HomeReview
+export default HomeReview */

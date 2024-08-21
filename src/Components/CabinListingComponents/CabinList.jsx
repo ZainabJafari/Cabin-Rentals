@@ -12,7 +12,8 @@ const CabinList = () => {
   }, []);
 
   return (
-    <div className='cabin-list'>
+    <div className='container'>
+      <div className='cabin-list'>
       {filteredCabins.map((cabin) => (
         <div key={cabin._id}>
           <div className='list'>
@@ -55,6 +56,7 @@ const CabinList = () => {
           </div>
         </div>
       ))}
+       </div>
     </div>
   );
 };

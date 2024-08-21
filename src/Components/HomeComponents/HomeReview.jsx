@@ -6,7 +6,7 @@ import customer3 from '../../assets/customer3.png'
 
 const HomeReview = () => {
   return (
-    <div>
+    <div className='container'>
         <h2 className='review-text'>Discover Memorable Retreat Experiences</h2>
         <div className='review'>
 

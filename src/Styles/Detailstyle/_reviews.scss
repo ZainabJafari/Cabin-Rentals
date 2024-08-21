@@ -3,11 +3,7 @@
     height: 62.906px;
     flex-shrink: 0;
 }
-.reviews {
-    display: flex;
-    margin-top: 900px;
-    margin-left: 256px;
-}
+
 .re {
     display: flex;
 }
@@ -58,7 +54,7 @@
 
 .user-review {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 260px);
     gap: 0px;
     padding: 0px;
 }

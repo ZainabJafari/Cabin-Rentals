@@ -66,6 +66,8 @@ const Nav = () => {
                 startDate={startDate}
                 endDate={endDate}
                 placeholderText="When"
+                className="dataPicker"
+
               />
             </p>
           </div>
@@ -82,6 +84,7 @@ const Nav = () => {
                 startDate={startDate}
                 endDate={endDate}
                 placeholderText="When"
+                className="dataPicker"
               />
 
             </p>
