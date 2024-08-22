@@ -1,118 +1,106 @@
-.container{
+.container {
     width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Gör att padding räknas in i totala bredden */
 }
+
 .review-text {
     color: #000;
     text-align: center;
     font-family: Libre Baskerville;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    margin: 40px 0;
 }
 
 .review {
     display: flex;
     justify-content: space-around;
-}
-
-.Img {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0px 20px 0px 20px;
+    flex-wrap: wrap; /* Tillåter innehållet att brytas till nästa rad */
+    gap: 20px;
 }
 
 .review-estimonial {
-    width: 300px;
-    height: 330px;
+    width: calc(33.333% - 40px); /* Tre recensioner per rad på stora skärmar */
+    max-width: 300px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #FCFCFC;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 10px 20px 0px 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .star-style {
     display: flex;
     justify-content: center;
     padding-top: 10px;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .review-name {
     color: #000;
-    text-align: center;
     font-family: Lora;
-    font-size: 16px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.24px;
-    padding-top: 10px;
+    margin-top: 15px;
 }
 
 .text-review {
     color: #000;
-    text-align: center;
     font-family: Lora;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.24px;
+    line-height: 1.5;
+    margin-top: 15px;
 }
 
 .re-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 100px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 15px;
 }
 
-@media (max-width: 390px) {
-    .star-style {
-        display: flex;
-        justify-content: center;
-        padding-top: 1px;
-        margin-top: 10px;
-    }
-    .review {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 0px 0px 64px 49px;
-    }
-    .review-text {
-        color: #000;
-        text-align: center;
-        font-family: Libre Baskerville;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin: 30px 0px 58px 10px;
-    }
-    .text-review {
-        color: #000;
-        text-align: center;
-        font-family: Lora;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 0;
-        line-height: 24px;
-        letter-spacing: -0.24px;
-        margin-top: 20px;
-        padding: 15px;
-    }
+/* Media Queries för responsiv design */
+@media (max-width: 1024px) {
     .review-estimonial {
-        width: 300px;
-        height: 327px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        background: #FCFCFC;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding: 0px 0px 0px 0px;
-        margin: 5px;
+        width: calc(50% - 40px); /* Två recensioner per rad på mellanstora skärmar */
+    }
+}
+
+@media (max-width: 768px) {
+    .review-estimonial {
+        width: 90%; /* En recension per rad på mindre skärmar */
+        max-width: 100%;
+    }
+
+    .review-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .review-text {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .text-review {
+        font-size: 14px;
+    }
+
+    .re-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .review-estimonial {
+        padding: 15px;
+        margin-bottom: 20px;
     }
 }

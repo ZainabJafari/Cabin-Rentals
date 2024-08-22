@@ -1,38 +1,43 @@
 .slider {
     position: relative;
     text-align: center;
+    max-width: 100%;
+    margin: 0 auto; /* Centrera slidern */
 }
 
 .slide {
     display: inline-block;
     position: relative;
+    overflow: hidden; /* Säkerställer att inga delar av bilden hamnar utanför */
+    width: 100%;
+    max-width: 800px; /* Maxbredd för att undvika att bilder blir för stora */
+    margin: 0 auto; /* Centrera bilden */
 }
 
 .slide img {
     display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 453px;
+    width: 100%; /* Gör bilden responsiv */
+    height: auto; /* Gör att höjden ändras proportionellt med bredden */
 }
 
-.next-button {
+.next-button, .before-button {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin: 0px 0px 230px 510px;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateY(-50%); /* Vertikal centrering av knapparna */
+    background: none;
     border: none;
-    height: 1px;
-    width: 1px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+/* Justera avståndet för knapparna */
+.next-button {
+    right: 20px; /* Avstånd från högra kanten */
 }
 
 .before-button {
-    position: absolute;
-    bottom: 10px;
-    right: 98%;
-    margin: 0px 0px 232px 40px;
-    height: 1px;
-    width: 1px;
+    left: 20px; /* Avstånd från vänstra kanten */
 }
 
 .slide-text {
@@ -40,51 +45,64 @@
     text-align: center;
     font-family: Libre Baskerville;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    margin-bottom: 20px;
+}
+
+/* Media Queries för responsiv design */
+@media (max-width: 768px) {
+    .slide-text {
+        font-size: 24px;
+    }
+    
+    .next-button, .before-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .next-button svg, .before-button svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slide-text {
+        font-size: 20px;
+    }
+
+    .slide img {
+        width: 100%; /* Justering för mindre skärmar */
+        height: auto;
+    }
+
+    .next-button, .before-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .next-button svg, .before-button svg {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media (max-width: 390px) {
-  
+    .slide-text {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+
     .next-button {
-        position: absolute;
-        bottom: 1px;
-        background-color: rgb(226, 231, 231);
-        left: 50%;
-        margin: 0px 0px 130px 150px;
-        transform: translateX(-50%);
-        border: none;
-        width: 1px;
-        height: 1px;
-        
+        right: 10px; /* Avstånd från kanten justeras för små skärmar */
     }
 
     .before-button {
-        position: absolute;
-        bottom: 10px;
-        right: 97%;
-        margin: 0px 0px 120px 0px;
-        width: 1px;
-        height: 1px;
+        left: 10px; /* Avstånd från kanten justeras för små skärmar */
     }
-
-    .slide-text {
-        color: #000;
-        text-align: center;
-        font-family: Libre Baskerville;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        margin: 40px 0px 50px 10px;
-    }
-    .slide img {
-        display: block;
-        margin: 0 auto;
-        width: 390px;
-        height: 220px;
-    }
-    
-
 }

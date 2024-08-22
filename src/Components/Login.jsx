@@ -67,19 +67,14 @@ const Login = () => {
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
+      <Link to={'/bookingInformation'}>
        <button type="button" onClick={(handleLogin)}>
           Login
         </button>
+        </Link>
       </form>
     </div>
-    <div className='link-login'>
-       <Link to={'/BookinInfo'}>
-       <button className='btn-btn-login' onClick={_createOrder}>My order</button>
-        </Link> 
-       <Link to={'/'}>
-       <button className='btn-btn-login'>Home</button>
-        </Link> 
-    </div>
+
     <UserRegister/>
     </div>
   );

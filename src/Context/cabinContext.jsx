@@ -32,7 +32,6 @@ export const CabinsContextProvider = (props) => {
           const result = await axios.get('http://localhost:7777/api/cabin/' + id);
           if (result.data) {
               setCabinDetail(result.data);
-              console.log(result.data);
           }
       } catch (error) {
           console.error(error);

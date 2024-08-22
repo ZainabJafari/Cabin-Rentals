@@ -1,232 +1,87 @@
 .footer-style {
+    background-color: #202020;
+    color: white;
+    padding: 30px;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 489px;
-    border-top: 1px solid #E5E5E5;
-    background: #486349;
-}
-
-.followText {
-    color: #FFF;
-    font-family: Libre Baskerville;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .conect-icon {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .conetcIcon {
+    fill: #CBB26A;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .conect-text {
+    margin-top: 20px;
+  }
+  
+  .contactUs {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card-one-footer {
     text-align: center;
-    margin-top: 69px;
-}
-
-.rectangel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 78px;
-    background-color: #E5E5E5;
-    width: 549px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    margin-left: 114px;
-}
-
-.Subscribe {
-    color: rgba(0, 0, 0, 0.80);
-    font-family: Lora;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
+    margin-top: 30px;
+  }
+  
+  .rectangel {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .rectangel p {
+    background-color: #333;
+    padding: 10px;
+    color: #CBB26A;
+  }
+  
+  .logo {
+    margin-top: 20px;
+    width: 100px;
+  }
+  
+  .footer-text {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-.space {
-    font-size: 50px;
-    font-weight: bold;
-    padding-left: 180px;
-}
-
-.email {
-    padding-top: 20px;
-    padding-left: 60px;
-    font-size: 20px;
-}
-
-.conect-icon {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    list-style: none;
-}
-
-.conetcIcon {
-    margin-top: 105px;
-}
-
-.contactUs {
-    color: #FFF;
-    font-family: Libre Baskerville;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.27px;
-    margin-top: 69px;
-}
-
-.conect-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    color: #FFF;
-    font-family: Lora;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.225px;
-    margin-top: -40px;
-}
-
-.contact {
-    display: flex;
-}
-
-.logoName {
-    color: #CBB26A;
-    font-family: Lora;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: -0.225px;
-}
-
-.logo {
-    width: 350px;
-    margin-left: 150px;
-    margin-top: 0px;
-}
-
-.footer-text {
-    color: #CBB26A;
-    font-family: Lora;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.225px;
-    margin-left: 160px;
-}
-
-
-.socialIcon {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-.social-part-text {
-    color: #FFF;
-    font-family: Libre Baskerville;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.27px;
-    margin: 73px 55px 20px 55px;
-}
-
-.Icon {
-    margin-right: 40px;
-}
-
-@media (max-width: 390px) {
-
-    .footer-style {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 390px;
-        height: 950px;
-        flex-shrink: 0;
-        border-top: 1px solid #E5E5E5;
-        background: #486349;
-    }
-
-    .rectangel {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-top: 8px;
-        background-color: #E5E5E5;
-        width: 250px;
-        height: 52px;
-        flex-shrink: 0;
-        border-radius: 20px;
-        margin-left: 78px;
-        position: relative;
-    }
-
-    .followText {
-        color: #FFF;
-        font-family: Libre Baskerville;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
-        text-align: center;
-        margin-top: 9px;
-        text-align: center;
-        // margin-left: 40px;
-    }
-
-    .logo {
-        width: 350px;
-        margin-left: 100px;
-        text-align: center;
-        width: 200px;
-        height: 122.099px;
-        flex-shrink: 0;
-    }
-    .footer-text {
-        color: #CBB26A;
-        font-family: Lora;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: -0.225px;
-        margin-left: 30px;
-
-    }
-    .socialIcon {
+  }
+  
+  .socialIcon {
     display: flex;
     list-style: none;
-
-    }
-    .Subscribe{
-        display: none;
-    }
-    .space{
-        display: none;
-    }
-    .email {
-        padding-top: 15px;
-        padding-right: 230px;
-        font-size: 20px;
-
-    }
-    .social-part-text {
-        color: #FFF;
-        font-family: Libre Baskerville;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: -0.27px;
-        margin: 3px 5px 20px 140px;
-    }
-}
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .Icon {
+    width: 40px;
+    height: 40px;
+    fill: #CBB26A;
+  }
+  
+  .followText {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  

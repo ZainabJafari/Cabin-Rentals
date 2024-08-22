@@ -1,74 +1,101 @@
+/* General Styling */
+.detail-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Facilities Heading */
 .detail-facilities-text {
     color: #000;
     font-family: Lora, serif;
     font-size: 24px;
     font-weight: 700;
-    margin: 2rem auto;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-.part-one{
+/* Facilities List */
+.facilities-list {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 30px;
-    max-width: 1200px;
-}
-.default-faciliti{
-    display: flex;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-
-.icon-list {
+/* Individual Facility Item */
+.facility-item {
     display: flex;
-    flex-direction: row;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
-.row-one{
-    padding: 10px;
-}
-.common-icon {
+
+/* Facility Description */
+.facility {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.common-icon p {
-    margin-top: 1rem;
+.facility p {
+    margin-top: 0.5rem;
     font-family: Lora, serif;
     font-size: 16px;
 }
 
-.description-text {
+/* Additional Facilities */
+.additional-facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Included Items */
+.included-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.included-text {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.included-item {
     display: flex;
     align-items: center;
-    margin: 1rem 0;
-}
-
-.description-text div {
-    margin-right: 1rem;
-}
-
-.rectangle-reserv {
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 60%;
-    margin: 2rem auto;
-    border-radius: 15px;
-    background-color: #f9f9f9;
-}
-.reserv{
+    justify-content: center;
     padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
+    margin: 0.5rem 0;
 }
 
-button {
+/* Reservation Container */
+.reservation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.reservation-info {
+    flex: 1;
+    text-align: center;
+}
+
+.reserve-button {
     background: #D8C690;
     color: #000;
     font-family: Lora, serif;
@@ -82,61 +109,13 @@ button {
     text-align: center;
 }
 
-.included-container {
-    text-align: center;
-    padding: 30px;
-    background-color: #f9f9f9;
-}
-.included{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 0.5rem 0;
-}
-.included-text{
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.included-container li svg {
-    padding-right: 1rem;
-}
-
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .icon-list {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
     .detail-facilities-text {
         font-size: 20px;
     }
 
-    .reserv-text, .reserv-price {
-        font-size: 16px;
-    }
-
-    button {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .icon-list {
-        grid-template-columns: 1fr;
-    }
-
-    .reserv-text, .reserv-price {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 0.5rem;
-    }
-
-    .rectangle-reserv {
-        width: 100%;
-        padding: 1rem;
+    .reserve-button {
+        font-size: 16
     }
 }

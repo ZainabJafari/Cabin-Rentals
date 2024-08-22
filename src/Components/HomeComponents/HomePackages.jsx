@@ -8,7 +8,7 @@ const HomePackages = () => {
   return (
     <div className='home-container'>
       <h1 className='packages-h1'>Tailored Retreats for Every Budget</h1>
-      <div className=''>
+      <div className='container'>
         <div className='package-card'>
             <img className='packageImage' src={homeImg1} alt="Cabin Budget" />
             <p className='text'>BUDGET</p>
@@ -37,6 +37,10 @@ const HomePackages = () => {
         <div className='Info-Card'>
         <p className='info-text'>Activities and Features</p>
         <p className='info-text2'>Explore a wide range of outdoor activities during your stay. Our cabins are also equipped with cozy fireplaces, fully stocked kitchen and comfortable living spaces for a delightful stay.</p>
+        </div>
+        <div className='Info-Card'>
+        <p className='info-text'>Booking and Reservations</p>
+        <p className='info-text2'>Booking with us is easy and convenient. Simply select your desired dates and cabin, and we'll take care of the rest. We offer flexible options to suit your preferences and ensure a seamless reservation process.</p>
         </div>
         <div className='Info-Card'>
         <p className='info-text'>Booking and Reservations</p>

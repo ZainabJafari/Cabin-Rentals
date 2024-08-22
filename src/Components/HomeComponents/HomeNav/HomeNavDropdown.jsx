@@ -32,7 +32,7 @@ const HomeNavDropdown = ({ onSelectCategory }) => {
         </svg>
       </div>
       {isOpen && (
-        <div className="dropdown-options">
+        <div className="dropdown">
         <Link to={'/cabinlist'}><button className='dropdown-option-btn' onClick={() => setSelectedCategory('All')}>All</button></Link> 
         <Link to={'/cabinlist'}> <button  className='dropdown-option-btn' onClick={() => setSelectedCategory('Budget')}>Budget</button> </Link> 
          <Link to={'/cabinlist'}><button className='dropdown-option-btn' onClick={() => setSelectedCategory('Standard')}>Standard</button></Link> 

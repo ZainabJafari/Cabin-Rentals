@@ -1,279 +1,200 @@
-.container{
+/* General Styling */
+.container {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.list {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    align-items: flex-start;
+    padding: 20px;
     width: 100%;
-    height: 300px;
-    flex-shrink: 0;
+}
+
+.cabin-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.cabin-card {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    box-shadow: 1px 5px gainsboro;
-    
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    max-width: 350px;
 }
 
 .card-one {
-    display: flex;
+    position: relative;
+}
 
-    img {
-        width: 330px;
-        height: 300px;
-        border-radius: 15px 0px 0px 15px;
-        position: relative;
-    }
+.cabin-img {
+    width: 100%;
+    height: 180px; /* Adjust height for better responsiveness */
+    object-fit: cover;
+}
 
-    p {
-        background-color: aliceblue;
-        border-radius: 20px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        position: absolute;
-        width: 10%;
-        height: 35px;
-        flex-shrink: 0;
-        color: #000;
-        text-align: center;
-        font-family: Lora;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+.cabin-category {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: Lora, serif;
+    font-size: 14px;
+    color: #000;
 }
 
 .card-two {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 10px;
-
-    div {
-        display: flex;
-        padding: 2px;
-        padding-bottom: 15px;
-    }
+    padding: 15px;
 }
 
 .price {
-    width: 40%;
-    height: 35px;
-    flex-shrink: 0;
+    background-color: #f0f0f0;
     border-radius: 20px;
-    color: #000;
+    padding: 10px;
     text-align: center;
-    font-family: Lora;
-    font-size: 20px;
-    font-style: normal;
+    font-family: Lora, serif;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
-    box-shadow: 2px 2px 2px 2px rgb(241, 241, 241);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    margin-bottom: 10px;
 }
 
-.cainName {
-    color: #000;
-    font-family: Lora;
-    font-size: 24px;
-    font-style: normal;
+.cabin-name {
+    font-family: Lora, serif;
+    font-size: 22px;
     font-weight: 400;
-    line-height: normal;
+    margin-bottom: 10px;
 }
 
 .description {
-    color: #000;
-    font-family: Lora;
-    font-size: 22px;
-    font-style: normal;
+    font-family: Lora, serif;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
-    padding-bottom: 16px;
+    margin-bottom: 15px;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .grades {
-    color: #000;
-    text-align: center;
-    font-family: Lora;
-    font-size: 22px;
-    font-style: normal;
+    font-family: Lora, serif;
+    font-size: 18px;
     font-weight: 700;
-    line-height: normal;
+    margin-right: 10px;
 }
 
 .card-three {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
 
-    button {
-        display: flex;
-        width: 80%;
-        height: 52px;
-        padding: 11px 38px 10px 35px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        background-color: #D8C690;
-        border: none;
-        border-radius: 15px;
-        color: #000;
-        font-family: Lora;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-right: 59px;
-        text-decoration: none;
+.cabin-like {
+    margin-right: 10px;
+}
 
+.btn-link {
+    text-decoration: none;
+}
+
+.cabin-btn {
+    background-color: #d8c690;
+    color: #000;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-family: Lora, serif;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cabin-btn:hover {
+    background-color: #c0b580;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
     }
 
-    div {
-        padding-left: 60px;
-        padding-bottom: 30px;
+    .cabin-card {
+        max-width: 100%;
+    }
+
+    .cabin-img {
+        height: 200px;
+    }
+
+    .cabin-category {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .price {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .cabin-name {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .grades {
+        font-size: 16px;
+    }
+
+    .cabin-btn {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
 
-@media (max-width: 390px) {
-    .list {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        height: 330px;
-        flex-shrink: 0;
-        margin: 49px 0px 1px 35px;
-        border-radius: 10px;
-        box-shadow: 1px 2px 1px 1px gainsboro;
-        position: relative;
+@media (max-width: 480px) {
+    .cabin-img {
+        height: 160px;
     }
 
-    .card-one {
-        display: flex;
-        height: 330px;
-
-        img {
-            width: 330px;
-            height: 180px;
-            flex-shrink: 0;
-            border-radius: 15px 15px 0px 15px;
-            position: relative;
-        }
-
-        p {
-            background-color: aliceblue;
-            border-radius: 20px;
-            margin: 120px 50px 226px 10px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            position: absolute;
-            width: 80px;
-            height: 35px;
-            flex-shrink: 0;
-            color: #000;
-            text-align: center;
-            font-family: Lora;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
+    .cabin-category {
+        font-size: 10px;
+        padding: 3px 6px;
     }
 
-    .card-two {
-        display: flex;
-        margin-right: 0px;
-        position: absolute;
-
-        div {
-            display: flex;
-            padding: 1px;
-            margin-bottom: 1px;
-            margin-top: 90px;
-        }
-        p{
-            padding: 0%;
-            font-size: 16px;
-        }
+    .price {
+        font-size: 14px;
+        padding: 6px;
     }
-    
-    .card-three {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-    
-        button {
-            display: flex;
-            width: 120px;
-            height: 40px;
-            padding: 1px 8px 1px 5px;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            background-color: #D8C690;
-            border: none;
-            border-radius: 15px;
-            color: #000;
-            font-family: Lora;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            position: absolute;
-            margin: 170px 0px 0px 190px;
-        }
-        .cabin-like{
-            margin: 20px 0px 0px 200px;
 
-        }
+    .cabin-name {
+        font-size: 18px;
     }
-    .price{
-        margin-top: 160px;
-        margin-left: 5px;
-        position: absolute;
-        background-color: white;
-        width: 140px;
+
+    .description {
         font-size: 14px;
     }
-    .cainName{
-        margin-top: 205px;
-        margin-left: 5px;
-        position: absolute;
-    }
-    .grades{
-        margin-top: 200px;
-        margin-left: 10px;
-    }
-    .star{
-        margin-top: 130px;
 
-        span{
-            margin-top: 105px;
-            height: 1px;
-            width: 20px;
-        }
+    .grades {
+        font-size: 14px;
     }
-    .description{
-        margin-top: 250px;
-        margin-left: 10px;
-        position: absolute;
 
+    .cabin-btn {
+        font-size: 14px;
+        padding: 6px 12px;
     }
-    .cabin-category{
-        margin-left: 50px;
-        background-color: #000;
-        position: absolute;
-    }
-    
-
 }
