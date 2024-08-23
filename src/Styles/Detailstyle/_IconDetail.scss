@@ -4,6 +4,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    border-top: solid 1px grey;
+    padding-top: 30px;
 }
 
 /* Facilities Heading */
@@ -20,7 +22,7 @@
 .facilities-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 100px;
     justify-content: center;
     margin-bottom: 2rem;
 }
@@ -58,15 +60,20 @@
 
 /* Included Items */
 .included-container {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     text-align: center;
+    border-top: solid 1px grey;
+    padding: 10px;
+
+    
 }
 
 .included-text {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding: 20px;
 }
 
 .included-item {
@@ -75,6 +82,7 @@
     justify-content: center;
     padding: 10px;
     margin: 0.5rem 0;
+    font-size: 20px;
 }
 
 /* Reservation Container */
@@ -88,11 +96,17 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 .reservation-info {
     flex: 1;
     text-align: center;
+    font-size: 20px;
+    p{
+        padding: 10px;
+    }
+    
 }
 
 .reserve-button {
@@ -100,7 +114,7 @@
     color: #000;
     font-family: Lora, serif;
     font-size: 18px;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -108,7 +122,9 @@
     width: 100%;
     text-align: center;
 }
-
+.review{
+    padding-top: 40px;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     .detail-facilities-text {

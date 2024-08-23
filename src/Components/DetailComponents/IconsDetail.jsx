@@ -101,21 +101,14 @@ const IconsDetail = () => {
         <p className="included-text">Included in the package</p>
         {cabinDetail.included.map((includ, index) => (
           <li key={index} className="included-item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="11"
-              height="11"
-              viewBox="0 0 11 11"
-              fill="none"
-            >
-              <circle cx="5.5" cy="5.5" r="5.5" fill="#396A3C" />
-            </svg>
+        
             {includ.Included}
           </li>
         ))}
       </div>
-
+        <div className="review">
       <HomeReview />
+        </div>
 
       <div className="reservation-container">
         <div className="reservation-info">

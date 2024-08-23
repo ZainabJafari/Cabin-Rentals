@@ -1,5 +1,3 @@
-
-import { parseISO } from 'date-fns';
 import React, { createContext, useContext, useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import { useDateContext } from './dateContext';
@@ -51,11 +49,6 @@ export const OrderProvider = ({ children }) => {
             console.error(error.message);
           }
     }
-
-    
-  
-
-
     return (
       <OrderContext.Provider
         value={{

@@ -1,17 +1,9 @@
-import Navbar from '../Components/Navbar'
-import { v4 as uuidv4 } from 'uuid';
-import {useCabinContext} from '../Context/cabinContext'
-import {useOrderContext} from '../Context/orderContext'
-
-
+import { useCabinContext } from '../../Context/cabinContext'
+import Navbar from '../Navbar'
 const PaymentConfirmation = () => {
 
     const randomId = Math.random().toString(36)
-
     const { cabinDetail } = useCabinContext()
-
-    const { order } = useOrderContext()
-
 
     if(!cabinDetail) return null
     return (

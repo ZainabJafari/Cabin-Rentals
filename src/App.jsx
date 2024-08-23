@@ -8,12 +8,9 @@ import {CabinsContextProvider} from './Context/cabinContext'
 import {DateProvider} from './Context/dateContext'
 import Details from './Pages/Details'
 import BookingConfirm from './Pages/BookingConfirm'
-import BookingWithLogin from './Components/BookingComponents/BookingWithLogin'
-import PaymentConfirmation from './Pages/PaymentConfirmation'
-import Login from './Components/Login'
+import PaymentConfirmation from './Components/PaymentConfirmation/PaymentConfirmation'
 import { OrderProvider } from './Context/orderContext'
-
-
+import Login from './auth/Login'
 
 const App = () => {
   return (
@@ -27,7 +24,6 @@ const App = () => {
         <Route path='/cabinlist' element={<CabinListing />}/>
         <Route path='/details/:id' element={<Details />}/>
         <Route path='/bookingInformation' element={<BookingConfirm />}/>
-        <Route path='/BookinInfo' element={<BookingWithLogin />}/>
         <Route path='/paymentConfirmation' element={<PaymentConfirmation />}/>
         <Route path='/login' element={<Login />}/>
       </Routes>

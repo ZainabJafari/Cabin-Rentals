@@ -1,7 +1,7 @@
 import { Component } from 'react'
-import acti1 from '../../assets/acti1.png'
-import acti2 from '../../assets/acti5.jpeg'
-import acti3 from '../../assets/acti3.jpeg'
+import acti1 from '../../assets/akt.jpeg'
+import acti2 from '../../assets/act2.jpeg'
+import acti3 from '../../assets/hero1.jpeg'
 
 class HomeSliderPart extends Component {
     constructor(props) {

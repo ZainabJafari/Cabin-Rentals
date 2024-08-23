@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useCabinContext } from '../../../Context/cabinContext'
 import {Link} from 'react-router-dom'
 
-const HomeNavDropdown = ({ onSelectCategory }) => {
+const HomeNavDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { getAllCabins, filteredCabins, setSelectedCategory } = useCabinContext()
 

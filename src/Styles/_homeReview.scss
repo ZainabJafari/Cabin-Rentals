@@ -4,15 +4,22 @@
     box-sizing: border-box; /* Gör att padding räknas in i totala bredden */
 }
 
-.review-text {
-    color: #000;
+/* Header för att separera titeln från recensionerna */
+.review-header {
     text-align: center;
-    font-family: Libre Baskerville;
-    font-size: 32px;
-    font-weight: 700;
-    margin: 40px 0;
+    margin-bottom: 40px;
 }
 
+/* Stil för rubriken */
+.review-text {
+    color: #000;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Flex-container för recensionerna */
 .review {
     display: flex;
     justify-content: space-around;
@@ -20,6 +27,7 @@
     gap: 20px;
 }
 
+/* Varje recension */
 .review-estimonial {
     width: calc(33.333% - 40px); /* Tre recensioner per rad på stora skärmar */
     max-width: 300px;
@@ -34,6 +42,7 @@
     text-align: center;
 }
 
+/* Stil för stjärnorna */
 .star-style {
     display: flex;
     justify-content: center;
@@ -41,23 +50,26 @@
     margin-top: 10px;
 }
 
+/* Stil för användarnamnet */
 .review-name {
     color: #000;
-    font-family: Lora;
+    font-family: 'Lora', serif;
     font-size: 18px;
     font-weight: 700;
     margin-top: 15px;
 }
 
+/* Stil för recensionstexten */
 .text-review {
     color: #000;
-    font-family: Lora;
+    font-family: 'Lora', serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     margin-top: 15px;
 }
 
+/* Stil för kundbilder */
 .re-img {
     width: 80px;
     height: 80px;
@@ -66,7 +78,7 @@
     margin-top: 15px;
 }
 
-/* Media Queries för responsiv design */
+/* Responsiv design för olika skärmstorlekar */
 @media (max-width: 1024px) {
     .review-estimonial {
         width: calc(50% - 40px); /* Två recensioner per rad på mellanstora skärmar */
@@ -87,20 +99,5 @@
 @media (max-width: 576px) {
     .review-text {
         font-size: 20px;
-        margin: 20px 0;
-    }
-
-    .text-review {
-        font-size: 14px;
-    }
-
-    .re-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .review-estimonial {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-}
+       
+    }}

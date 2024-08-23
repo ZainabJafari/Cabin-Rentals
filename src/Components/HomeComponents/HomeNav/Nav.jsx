@@ -1,4 +1,3 @@
-import logo from '../../../assets/logo.png';
 import HomeNavDropdown from './HomeNavDropdown';
 import React from 'react';
 import DatePicker from 'react-datepicker';
@@ -22,7 +21,7 @@ const Nav = () => {
     <div>
       <Navbar />
       <div className="card"> 
-      <h1 className="nav-text">Explore our luxury & romantic cabins for couples</h1>
+      <h1 className="nav-text">Find Your Perfect Getaway – A Wide Selection of Vacation Rentals</h1>
       <div className="container">
         <div className="hero">
           <div className="dropdown">
@@ -57,7 +56,6 @@ const Nav = () => {
           </div>
 
           <HomeNavDropdown />
-
           <Link to="/cabinlist">
             <svg
               className="home-nav-svg"

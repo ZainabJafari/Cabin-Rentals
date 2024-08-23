@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import img1 from '../../assets/image 179.png';
-import img2 from '../../assets/image 180.png';
-import img3 from '../../assets/image 181.png';
-import img4 from '../../assets/image 182.png';
+import img1 from '../assets/image 179.png'
+import img2 from '../assets/image 180.png';
+import img3 from '../assets/image 181.png';
+import img4 from '../assets/image 182.png';
 import { Link } from 'react-router-dom';
 
 const UserRegister = () => {

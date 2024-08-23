@@ -1,8 +1,8 @@
-import React, { useState , useContext} from 'react';
-import Navbar from './Navbar';
+import React, { useState } from 'react';
 import {useNavigate, Navigate , Link} from 'react-router-dom'
-import UserRegister from './BookingComponents/UserRegister';
+import UserRegister from '../auth/UserRegister';
 import {useOrderContext} from '../Context/orderContext'
+import Navbar from '../Components/Navbar';
 
 const Login = () => {
   const [email, setEmail] = useState('sara@gmail.com');
