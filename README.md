@@ -1,12 +1,25 @@
+<img width="908" alt="image" src="https://github.com/user-attachments/assets/8c26781a-3945-4644-85f0-0df15e2dd22a">
+
+
 # React + Vite
 
-Run:
+Run Server:
 
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
+
+Run Client:
+
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+
+
 
 Open http://localhost:5137 with your browser to see the result.
 
