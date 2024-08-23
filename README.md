@@ -1,5 +1,7 @@
 <img width="908" alt="image" src="https://github.com/user-attachments/assets/8c26781a-3945-4644-85f0-0df15e2dd22a">
 
+![Demo](./src/assets/NamnlsvideoGjordmedClipchamp1-ezgif.com-video-to-gif-converter.gif)
+
 
 # React + Vite
 
@@ -10,6 +12,8 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
+
 
 Run Client:
 
